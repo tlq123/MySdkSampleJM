@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="color_gray">#dddddd</color>
+    <color name="color_green">#00b4aa</color>
+    <color name="color_red">#FF6A6E</color>
+    <color name="color_red_light">#FFB4B6</color>
+    <color name="color_blue">#41c7db</color>
+    <color name="transparent">#00000000</color>
+    <color name="color_value_f2f6f9">#f2f6f9</color>
+    <color name="color_value_51596d">#51596d</color>
+    <color name="color_value_7e8699">#7e8699</color>
+    <color name="color_value_ecf4f6">#ecf4f6</color>
+    <color name="color_value_dde3e7">#dde3e7</color>
+    <color name="color_value_ffda44">#ffda44</color>
+    <color name="color_value_aab0be">#aab0be</color>
+    <color name="color_value_21bed6">#21bed6</color>
+    <color name="color_value_c4d0d9">#c4d0d9</color>
+    <color name="color_value_1e2336">#1e2336</color>
+    <color name="color_value_1a98ab">#1a98ab</color>
+    <color name="color_value_51596b">#51596b</color>
+    <color name="color_value_000000">#000000</color>
+    <color name="color_value_ffffff">#ffffff</color>
+    <color name="color_value_dadada">#dadada</color>
+    <color name="white">#ffffff</color>
+    <color name="color_black_qian">#A4A8AB</color>
+
+</resources>

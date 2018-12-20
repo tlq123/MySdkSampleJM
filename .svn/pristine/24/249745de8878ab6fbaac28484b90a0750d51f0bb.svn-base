@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="C:\Users\zj_os01\.gradle\caches\modules-2\files-2.1\io.reactivex.rxjava2\rxjava\2.1.0\2fdf84dedcaaeabb9d70cde9dbb8aad4eccb80a1\rxjava-2.1.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="2fdf84dedcaaeabb9d70cde9dbb8aad4eccb80a1">
+        <dex dex="E:\as_my_project\MySdkSample\app\build\intermediates\transforms\dex\debug\folders\1000\10\rxjava-2.1.0_260d87d5e91c2d867b318ef938b3452a773ea391\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\as_my_project\MySdkSample\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\25.2.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="cb454b52545859ed2f24a6c01366805b0fa04b22">
+        <dex dex="E:\as_my_project\MySdkSample\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-25.2.0_2721368dc105d8b1804e68c57dc4d2576b8fe22c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\as_my_project\MySdkSample\app\build\intermediates\exploded-aar\music-release\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="67739a63a7a05c874457cf55f5eb51b59bab3ec2">
+        <dex dex="E:\as_my_project\MySdkSample\app\build\intermediates\transforms\dex\debug\folders\1000\10\intermediates-exploded-aar-music-release_274755ade3080be5cadb5e821cc9dbd2441b9a9b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\zj_os01\.gradle\caches\modules-2\files-2.1\com.squareup.okhttp3\okhttp\3.9.0\1b6c10b5120995a7542c1a31b7828fb8593c8ba\okhttp-3.9.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="01b6c10b5120995a7542c1a31b7828fb8593c8ba">
+        <dex dex="E:\as_my_project\MySdkSample\app\build\intermediates\transforms\dex\debug\folders\1000\10\okhttp-3.9.0_e5da67371038c13ef5b17ede1c966750952eb683\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\as_my_project\MySdkSample\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.2.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="8fe8a8f77d651982ce5e18f6187dc4daf914ac57">
+        <dex dex="E:\as_my_project\MySdkSample\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-fragment-25.2.0_50933257a79b0a09a10cc002af08b0e8a56e642b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\zj_os01\AppData\Local\Android\Sdk\extras\android\m2repository\com\android\support\support-annotations\25.2.0\support-annotations-25.2.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="4a5a82a027706397fff621b22fd6fa796e91d7c5">
+        <dex dex="E:\as_my_project\MySdkSample\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-25.2.0_38902a0438b4080a134f0c6baec730857d5019e6\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\as_my_project\MySdkSample\app\build\intermediates\exploded-aar\sdkhttp\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="872f3d577c3e6135054b5b612b6c09ec5878332d">
+        <dex dex="E:\as_my_project\MySdkSample\app\build\intermediates\transforms\dex\debug\folders\1000\10\intermediates-exploded-aar-sdkhttp_bfef8b9483d89bec924bd60a6536edabbd310916\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\as_my_project\MySdkSample\app\libs\Utils-1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="a20b5d6dc794f394637e2fab94cad1b5202bbc6e">
+        <dex dex="E:\as_my_project\MySdkSample\app\build\intermediates\transforms\dex\debug\folders\1000\2\Utils-1_12299275fa44691091c0ab24569b00ba9a7a6e0d\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\zj_os01\.gradle\caches\modules-2\files-2.1\org.reactivestreams\reactive-streams\1.0.0\14b8c877d98005ba3941c9257cfe09f6ed0e0d74\reactive-streams-1.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="14b8c877d98005ba3941c9257cfe09f6ed0e0d74">
+        <dex dex="E:\as_my_project\MySdkSample\app\build\intermediates\transforms\dex\debug\folders\1000\10\reactive-streams-1.0.0_01b331de551e62f51fd41c06c7e1ef3d4966a26e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\as_my_project\MySdkSample\app\libs\ant.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="6d473e8653d952045f550f4ef225a9591b79094a">
+        <dex dex="E:\as_my_project\MySdkSample\app\build\intermediates\transforms\dex\debug\folders\1000\2\ant_f72c1c759f441fa9b384f74e126d4f9785586226\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\as_my_project\MySdkSample\app\build\intermediates\exploded-aar\io.reactivex.rxjava2\rxandroid\2.0.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="4119ea97a7191ff9b8f33b534ea220448f62f491">
+        <dex dex="E:\as_my_project\MySdkSample\app\build\intermediates\transforms\dex\debug\folders\1000\10\io.reactivex.rxjava2-rxandroid-2.0.1_bbc974244b1aa64e1d01387133ad1bc8e12c8601\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\as_my_project\MySdkSample\app\build\intermediates\exploded-aar\pl.droidsonroids.gif\android-gif-drawable\1.2.4\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c146e86134622a0158c563953c4f5656587bff96">
+        <dex dex="E:\as_my_project\MySdkSample\app\build\intermediates\transforms\dex\debug\folders\1000\10\pl.droidsonroids.gif-android-gif-drawable-1.2.4_5f96fa5329b31443913cd72705ff3d70c642975b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\zj_os01\.gradle\caches\modules-2\files-2.1\org.eclipse.paho\org.eclipse.paho.client.mqttv3\1.1.0\89d827ffa47c241f2627421ef1d6c7a8c207a341\org.eclipse.paho.client.mqttv3-1.1.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="89d827ffa47c241f2627421ef1d6c7a8c207a341">
+        <dex dex="E:\as_my_project\MySdkSample\app\build\intermediates\transforms\dex\debug\folders\1000\10\org.eclipse.paho.client.mqttv3-1.1.0_dc77c506a3108e94fb11936b68aaf771648f1d89\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\as_my_project\MySdkSample\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.2.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="67eb33110dbacb46a48175b08ae0c96761d2c17d">
+        <dex dex="E:\as_my_project\MySdkSample\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-compat-25.2.0_40416674efd8c581b6f85236094dc83b7e93bef6\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\as_my_project\MySdkSample\app\build\intermediates\exploded-aar\common-release\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="f072a81149649b217992e00fc0a3c59644a93097">
+        <dex dex="E:\as_my_project\MySdkSample\app\build\intermediates\transforms\dex\debug\folders\1000\10\intermediates-exploded-aar-common-release_46c4227d13818fa0ae1968513982248a9e871b64\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\as_my_project\MySdkSample\app\build\intermediates\exploded-aar\com.tbruyelle.rxpermissions2\rxpermissions\0.9.4\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b2cb5e4ead4034da3903770c55334c257b874dbb">
+        <dex dex="E:\as_my_project\MySdkSample\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.tbruyelle.rxpermissions2-rxpermissions-0.9.4_ec0c1efd5118d4474aa005ee0a037c46c81ec0be\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\as_my_project\MySdkSample\app\build\intermediates\exploded-aar\turingmusic_mg\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="a0e6948d8a3b5648f3186ef61e42456983018bc3">
+        <dex dex="E:\as_my_project\MySdkSample\app\build\intermediates\transforms\dex\debug\folders\1000\10\intermediates-exploded-aar-turingmusic_mg_c57e8a3cbafa5ab0ed07675fefe0b7ccb848688c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\as_my_project\MySdkSample\app\build\intermediates\exploded-aar\tts-release\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b7f8c6f1bde0818d77a65c8eb1c7214522006f82">
+        <dex dex="E:\as_my_project\MySdkSample\app\build\intermediates\transforms\dex\debug\folders\1000\10\intermediates-exploded-aar-tts-release_7c53ecf66518b1ddf071a00712b5505572821c38\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\zj_os01\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.8.1\2a8e0aa38a2e21cb39e2f5a7d6704cbdc941da0\gson-2.8.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="02a8e0aa38a2e21cb39e2f5a7d6704cbdc941da0">
+        <dex dex="E:\as_my_project\MySdkSample\app\build\intermediates\transforms\dex\debug\folders\1000\10\gson-2.8.1_3c589a652980f4f83d3380f8dac6249b2043a28c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\as_my_project\MySdkSample\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.2.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ee394a892dd21c03a528139c1e8d4e0e1264ac84">
+        <dex dex="E:\as_my_project\MySdkSample\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-media-compat-25.2.0_cb59e3d7030b4de0db653883592d62f9e1c9e79c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\as_my_project\MySdkSample\app\build\intermediates\exploded-aar\common-release\jars\libs\hcicloud-5.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="6a46bdc81af6bdc3c5c9daf198070c0cb14dc75f">
+        <dex dex="E:\as_my_project\MySdkSample\app\build\intermediates\transforms\dex\debug\folders\1000\10\hcicloud-5.0_b6a84b1b5b2bdc2056c180e1b00fff3b65f6969e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\zj_os01\.gradle\caches\modules-2\files-2.1\com.squareup.okio\okio\1.13.0\a9283170b7305c8d92d25aff02a6ab7e45d06cbe\okio-1.13.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="a9283170b7305c8d92d25aff02a6ab7e45d06cbe">
+        <dex dex="E:\as_my_project\MySdkSample\app\build\intermediates\transforms\dex\debug\folders\1000\10\okio-1.13.0_98a356494fc86afd5c95866bd05577a80b50b479\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\zj_os01\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit2\converter-gson\2.1.0\aa557d71ead91cbf26e0c316a0f593d168303309\converter-gson-2.1.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="aa557d71ead91cbf26e0c316a0f593d168303309">
+        <dex dex="E:\as_my_project\MySdkSample\app\build\intermediates\transforms\dex\debug\folders\1000\10\converter-gson-2.1.0_e18a4658cd9d0e1c86028be40490320794da40ef\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\as_my_project\MySdkSample\app\libs\Connectivity-1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="f17a19e6795aa5817e503e671cbf22a07da780d2">
+        <dex dex="E:\as_my_project\MySdkSample\app\build\intermediates\transforms\dex\debug\folders\1000\2\Connectivity-1_1eb47074375e1447598c0e59f679ddfcafb1c63c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\zj_os01\.gradle\caches\modules-2\files-2.1\org.eclipse.paho\org.eclipse.paho.android.service\1.1.1\6c3c5ef8f5f205def0f725b6c0f57217c8fb9ff5\org.eclipse.paho.android.service-1.1.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="6c3c5ef8f5f205def0f725b6c0f57217c8fb9ff5">
+        <dex dex="E:\as_my_project\MySdkSample\app\build\intermediates\transforms\dex\debug\folders\1000\10\org.eclipse.paho.android.service-1.1.1_ccb8fdc2319ccb8dfc8c951d5b7db9c6792cb4be\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\as_my_project\MySdkSample\app\build\intermediates\exploded-aar\iot-release\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="440eb6e723205f51e64b6fe78bbaefac98334abc">
+        <dex dex="E:\as_my_project\MySdkSample\app\build\intermediates\transforms\dex\debug\folders\1000\10\intermediates-exploded-aar-iot-release_f5ba2a6a6422fa3291a601b66250a4404481bb8f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\as_my_project\MySdkSample\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.2.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e820b7be8c035dd522da4bc822e8a76c8e27921a">
+        <dex dex="E:\as_my_project\MySdkSample\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-utils-25.2.0_e6955cd185e073ec4634572851c5dff3f66fd232\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\zj_os01\.gradle\caches\modules-2\files-2.1\com.squareup.retrofit2\retrofit\2.1.0\2de7cd8b95b7021b1d597f049bcb422055119f2c\retrofit-2.1.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="2de7cd8b95b7021b1d597f049bcb422055119f2c">
+        <dex dex="E:\as_my_project\MySdkSample\app\build\intermediates\transforms\dex\debug\folders\1000\10\retrofit-2.1.0_13fff106fd347de47184c6c167e54f5fe7d73574\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\as_my_project\MySdkSample\app\build\intermediates\exploded-aar\com.zhy\okhttputils\2.6.2\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="155fef2600f48631a9e9665c0873743b6d24e324">
+        <dex dex="E:\as_my_project\MySdkSample\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.zhy-okhttputils-2.6.2_a49b25b128cfbb4223ef086117b413abaa622df7\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\as_my_project\MySdkSample\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.2.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="702d339bc0a81d21354cd7e2cf2b67225fa4a16c">
+        <dex dex="E:\as_my_project\MySdkSample\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-25.2.0_d28585e1915d2c95b15c735ee87c7b5bb89fee7c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\as_my_project\MySdkSample\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\25.2.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="810f41e5b7fd99f196ebeabe865ba2c54e7e76dc">
+        <dex dex="E:\as_my_project\MySdkSample\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-25.2.0_69e69d4876d7db0048e178cf8e8e195b93653a1a\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\as_my_project\MySdkSample\app\build\intermediates\exploded-aar\authority-release\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b7451b7e4c485c75b61e744bec91ec66b3468e4f">
+        <dex dex="E:\as_my_project\MySdkSample\app\build\intermediates\transforms\dex\debug\folders\1000\10\intermediates-exploded-aar-authority-release_b6976b9d0b1d08b46fa3f93edf1cdaffc3c90530\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\as_my_project\MySdkSample\app\build\intermediates\exploded-aar\asr-release\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="91beecfdac7869b885d8d5ffce1f88e7e4a94a7a">
+        <dex dex="E:\as_my_project\MySdkSample\app\build\intermediates\transforms\dex\debug\folders\1000\10\intermediates-exploded-aar-asr-release_03548839f2459c81e0d18686bb0a025f23f69fb4\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\as_my_project\MySdkSample\app\build\intermediates\exploded-aar\com.android.support\support-v4\25.2.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="E:\as_my_project\MySdkSample\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-25.2.0_ca70add8e8988ecd87dc1467cdc35eb346697bb9\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\as_my_project\MySdkSample\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.2.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="fa0446a14ed5dd3725047d6399ffea771a564b30">
+        <dex dex="E:\as_my_project\MySdkSample\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-ui-25.2.0_64bf8a847fa636482094efd85dcf48fee3a8268e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\as_my_project\MySdkSample\app\libs\qdreamer.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="25ac0805b8c65090ba9f30bfd0ab5f7820aed32c">
+        <dex dex="E:\as_my_project\MySdkSample\app\build\intermediates\transforms\dex\debug\folders\1000\2\qdreamer_3e19c8b1cade166791cb9f97de4756f855513e9d\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\as_my_project\MySdkSample\app\build\intermediates\exploded-aar\net.zetetic\android-database-sqlcipher\3.5.4\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="310bcc4b2dbdddf4b2200e84b32a05b00e5f7ba4">
+        <dex dex="E:\as_my_project\MySdkSample\app\build\intermediates\transforms\dex\debug\folders\1000\10\net.zetetic-android-database-sqlcipher-3.5.4_78db403162e635b29b8f2225fe88d1342bbc25c0\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="E:\as_my_project\MySdkSample\app\build\intermediates\exploded-aar\semantic-release\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="43024956c5e9bec928339d8e918c485c2b2282a2">
+        <dex dex="E:\as_my_project\MySdkSample\app\build\intermediates\transforms\dex\debug\folders\1000\10\intermediates-exploded-aar-semantic-release_203dd451fcf35b19788f122a2999b8e943e1b72b\classes.dex" />
+    </item>
+
+</items>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="network_timeout">网络连接超时</string>
+    <string name="unique_type_invalid">未能获取到设备的唯一id.请检查指定的TURING_UNIQUE_TYPE对应的唯一标识是否存在</string>
+    <string name="unknow_unique_type">未知的TURING_UNIQUE_TYPE.请仔细检查TURING_UNIQUE_TYPE是否正确</string>
+</resources>

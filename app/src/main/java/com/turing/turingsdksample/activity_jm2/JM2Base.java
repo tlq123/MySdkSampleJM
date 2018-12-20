@@ -1,0 +1,225 @@
+package com.turing.turingsdksample.activity_jm2;
+
+import android.content.Context;
+
+import com.google.gson.JsonObject;
+import com.turing.semantic.SemanticManager;
+import com.turing.semantic.entity.Behavior;
+import com.turing.semantic.listener.OnHttpRequestListener;
+import com.turing.tts.TTSListener;
+import com.turing.tts.TTSManager;
+import com.turing.turingsdksample.constants.ConstantsUtil;
+import com.turing.turingsdksample.constants.FunctionConstants;
+import com.turing.turingsdksample.demo_common.MediaMusicUtil;
+import com.turing.turingsdksample.util.Logger;
+import com.turing.turingsdksample.util.OSDataTransformUtil;
+
+
+/**
+ * @author：licheng@uzoo.com
+ */
+
+public class JM2Base {
+
+    private String TAG = "JM2Base" ;
+
+    private TTSListener TTSListener;
+    private OnHttpRequestListener mSemanticListener;
+    private boolean isDopost = false;//是否进行请求
+    private boolean isTTs = false;//是否tts
+
+    private int mPowerValue ;
+
+    private JM2Base() {
+    }
+
+    private static class SingletonHolder {
+        private static final JM2Base INSTANCE = new JM2Base();
+    }
+    public static JM2Base getInstance() {
+        return SingletonHolder.INSTANCE;
+    }
+
+    protected void setTTSListener(TTSListener TTSListener) {
+        this.TTSListener = TTSListener;
+    }
+
+    protected void setSemanticListener(OnHttpRequestListener semanticListener) {
+        this.mSemanticListener = semanticListener;
+    }
+
+    public void setPowerValue(int pv){
+        mPowerValue = pv ;
+    }
+
+
+    protected OnHttpRequestListener semanticListener = new OnHttpRequestListener() {
+
+        @Override
+        public void onSuccess(String s) {
+
+            Logger.i(TAG, "semanticListener onSuccess:" + s);
+
+            Behavior behavior = OSDataTransformUtil.getBehavior(s);
+            if( behavior == null ){
+                TTSManager.getInstance().startTTS("这个我还不会，请换一个", ttsCallBack);
+                Logger.i(TAG, "semanticListener 网络数据无法解析" );
+                return;
+            }
+            String tts = behavior.getResults().get(0).getValues().getText();
+            int code = behavior.getIntent().getCode();
+            Logger.i(TAG, "semanticListener tts:" + tts + "   code:" + code);
+
+            //唱歌 或者 讲故事
+            if (FunctionConstants.STORY_CODE == code || FunctionConstants.SONG_CODE == code) {
+                if (mSemanticListener != null) {
+                    mSemanticListener.onSuccess(s);
+                }
+                return ;
+            }
+
+            //聊天
+            if (isTTs) {
+                readTts(s);
+            }
+        }
+
+        @Override
+        public void onError(int i, String s) {
+            if (mSemanticListener != null) {
+                mSemanticListener.onError(i, s);
+            }
+        }
+
+        @Override
+        public void onCancel() {
+
+        }
+    };
+
+
+    /**
+     * 读
+     **/
+    protected void readTts(String str) {
+        try {
+            String tts = OSDataTransformUtil.getResultBean(str).getValues().getText();
+            int code = OSDataTransformUtil.getIntent(str).getCode();
+            Logger.i(TAG, "readTts tts:" + tts +" code:"+code);
+
+            if(code == 900110){        //改变音量  //"appKey":"os.sys.setting","code":900110,"
+
+                int operateState = OSDataTransformUtil.getIntent(str).getOperateState();
+                if(operateState == 1010){//音量变大
+                    tts = MediaMusicUtil.getInstance().setVolume(operateState,tts);
+                }else if(operateState == 1011){//音量变小
+                    tts = MediaMusicUtil.getInstance().setVolume(operateState,tts);
+                }else if (operateState == 1030){  //当前电量
+                    tts ="当前电量值为百分之"+ mPowerValue ;
+                }
+
+            }else if(code == 900101){  //"appKey":"os.sys.exit", "code":900101,
+                int operateState = OSDataTransformUtil.getIntent(str).getOperateState();
+                if(operateState == 1003){  //再见，拜拜，
+                    tts = ConstantsUtil.DORMANCY;
+                }
+            }else if(code == 100000){
+                int operateState = OSDataTransformUtil.getIntent(str).getOperateState();
+                if(operateState == 2001){  //开机提示语
+                    JsonObject object = OSDataTransformUtil.getIntent(str).getParameters();
+                    tts = object.getAsJsonArray("tasklist").get(0).getAsJsonObject().get("text").getAsString();
+                }
+            }
+
+            TTSManager.getInstance().startTTS(tts, ttsCallBack);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            TTSManager.getInstance().startTTS("网络不给力", ttsCallBack);
+        }
+    }
+
+    protected TTSListener ttsCallBack = new TTSListener() {
+
+        @Override
+        public void onSpeakBegin(String s) {
+            if (TTSListener != null) {
+                TTSListener.onSpeakBegin(s);
+            }
+        }
+
+        @Override
+        public void onSpeakPaused() {
+            if (TTSListener != null) {
+                TTSListener.onSpeakPaused();
+            }
+        }
+
+        @Override
+        public void onSpeakResumed() {
+            if (TTSListener != null) {
+                TTSListener.onSpeakResumed();
+            }
+        }
+
+        @Override
+        public void onSpeakCompleted() {
+            if (TTSListener != null) {
+                TTSListener.onSpeakCompleted();
+            }
+        }
+
+        @Override
+        public void onSpeakFailed() {
+
+        }
+    };
+
+    /**
+     * 语义
+     **/
+    public void doPost(String content) {
+
+        //设置从云端返回数据读取的超时时间
+        SemanticManager.getInstance().setReadTimeout(15 * 1000);
+        //设置发送数据到云端写入的超时时间
+        SemanticManager.getInstance().setWriteTimeout(15 * 1000);
+        //设置连接超时时间
+        SemanticManager.getInstance().setConnectTimeout(15 * 1000);
+        SemanticManager.getInstance().requestSemantic(content, semanticListener);
+    }
+
+    //开机提示语
+    public void doPostFirstConversion() {
+
+        //设置从云端返回数据读取的超时时间
+        SemanticManager.getInstance().setReadTimeout(15 * 1000);
+        //设置发送数据到云端写入的超时时间
+        SemanticManager.getInstance().setWriteTimeout(15 * 1000);
+        //设置连接超时时间
+        SemanticManager.getInstance().setConnectTimeout(15 * 1000);
+        SemanticManager.getInstance().requestFirstConversion(semanticListener);
+    }
+
+
+    /**
+     * 用于设置
+     **/
+    protected void setActionBo(boolean isdo, boolean isTt) {
+        this.isDopost = isdo;
+        this.isTTs = isTt;
+    }
+
+    /**
+     * asr+语义+tts
+     **/
+    public void getAll(OnHttpRequestListener semanticClientListener, TTSListener ttsClientListener,Context context) {
+        setSemanticListener(semanticClientListener);
+        setTTSListener(ttsClientListener);
+        setActionBo(true, true);
+//        TTSManager.getInstance().stopTTS();
+
+        doPostFirstConversion(); //开机提示语
+    }
+
+}

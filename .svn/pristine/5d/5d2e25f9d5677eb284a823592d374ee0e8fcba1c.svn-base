@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ChildrenSDKASRAPI</string>
+    <string name="sdk_not_init">SDK没有初始化</string>
+    <string name="type_ali_online_cn">ALI中文在线</string>
+    <string name="type_hci_online_cn">HCI中文在线</string>
+</resources>

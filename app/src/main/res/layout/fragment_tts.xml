@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="30dp"
+    android:layout_marginRight="30dp"
+    android:scrollbars="vertical"
+    >
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/et_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/say_what" />
+
+
+    <TextView
+        android:id="@+id/tv_engine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/ttsengine"
+        android:visibility="gone" />
+
+    <Spinner
+        android:id="@+id/spinner_tts_type"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/darker_gray"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_tone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/tone"
+        android:visibility="gone" />
+
+    <Spinner
+        android:id="@+id/spinner_tone"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@android:color/darker_gray"
+        android:visibility="gone" />
+
+
+
+    <TextView
+        android:id="@+id/tv_effect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/effect"
+        android:visibility="gone"
+       />
+
+    <Spinner
+        android:visibility="gone"
+        android:id="@+id/spinner_effect"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@android:color/darker_gray"
+      />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/volume" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="9"
+        android:progress="5" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/speed" />
+
+    <SeekBar
+        android:id="@+id/speed_seekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="9"
+        android:progress="5" />
+    <TextView
+        android:id="@+id/enhancer_tv"
+        android:visibility="gone"
+        android:text="@string/enhancer_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/btn_init"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/init_first" />
+
+
+    <Button
+        android:id="@+id/btn_init_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/online_tts" />
+
+
+    <Button
+        android:id="@+id/btn_start"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/start_tts" />
+
+    <Button
+        android:id="@+id/btn_stop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/stop_tts" />
+
+
+
+    <SeekBar
+        android:id="@+id/enhancer_seekbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="5000"
+        android:visibility="gone"
+        android:progress="1500" />
+
+    <Button
+        android:visibility="gone"
+        android:id="@+id/btn_enhancer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/close_enhancer" />
+
+</LinearLayout>
+</ScrollView>

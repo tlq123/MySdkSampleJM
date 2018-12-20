@@ -1,0 +1,222 @@
+[
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_top_material.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.2.0\\res\\drawable\\abc_cab_background_top_material.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_dark.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.2.0\\res\\drawable\\abc_item_background_holo_dark.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_textfield_search_material.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.2.0\\res\\drawable\\abc_textfield_search_material.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_spinner_textfield_background_material.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.2.0\\res\\drawable\\abc_spinner_textfield_background_material.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_light.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.2.0\\res\\drawable\\abc_list_selector_holo_light.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_item_background_holo_light.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.2.0\\res\\drawable\\abc_item_background_holo_light.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_search_api_material.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.2.0\\res\\drawable\\abc_ic_search_api_material.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\seekbar_img.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\src\\main\\res\\drawable\\seekbar_img.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_thumb_material.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.2.0\\res\\drawable\\abc_seekbar_thumb_material.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_go_search_api_material.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.2.0\\res\\drawable\\abc_ic_go_search_api_material.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\notification_icon_background.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.2.0\\res\\drawable\\notification_icon_background.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\selector_send_bg.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\src\\main\\res\\drawable\\selector_send_bg.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_dark.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.2.0\\res\\drawable\\abc_list_selector_background_transition_holo_dark.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_switch_thumb_material.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.2.0\\res\\drawable\\abc_switch_thumb_material.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_arrow_drop_right_black_24dp.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.2.0\\res\\drawable\\abc_ic_arrow_drop_right_black_24dp.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_radio_material.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.2.0\\res\\drawable\\abc_btn_radio_material.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_check_material.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.2.0\\res\\drawable\\abc_btn_check_material.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\selector_btn_ffda44.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\src\\main\\res\\drawable\\selector_btn_ffda44.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_menu_overflow_material.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.2.0\\res\\drawable\\abc_ic_menu_overflow_material.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_tab_indicator_material.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.2.0\\res\\drawable\\abc_tab_indicator_material.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\top_radius_dde3e7.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\src\\main\\res\\drawable\\top_radius_dde3e7.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_clear_material.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.2.0\\res\\drawable\\abc_ic_clear_material.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\asr_start_bg.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\src\\main\\res\\drawable\\asr_start_bg.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_material.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.2.0\\res\\drawable\\abc_ratingbar_material.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_voice_search_api_material.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.2.0\\res\\drawable\\abc_ic_voice_search_api_material.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_small_material.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.2.0\\res\\drawable\\abc_ratingbar_small_material.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\selector_btn_start_end.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\src\\main\\res\\drawable\\selector_btn_start_end.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_dark.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.2.0\\res\\drawable\\abc_list_selector_holo_dark.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_track_material.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.2.0\\res\\drawable\\abc_seekbar_track_material.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_text_cursor_material.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.2.0\\res\\drawable\\abc_text_cursor_material.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\shape_select_window.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\src\\main\\res\\drawable\\shape_select_window.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_default_mtrl_shape.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.2.0\\res\\drawable\\abc_btn_default_mtrl_shape.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\bottom_radius_white.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\src\\main\\res\\drawable\\bottom_radius_white.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_cab_background_internal_bg.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.2.0\\res\\drawable\\abc_cab_background_internal_bg.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_seekbar_tick_mark_material.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.2.0\\res\\drawable\\abc_seekbar_tick_mark_material.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\selector_btn_sure_camera.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\src\\main\\res\\drawable\\selector_btn_sure_camera.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_background_transition_holo_light.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.2.0\\res\\drawable\\abc_list_selector_background_transition_holo_light.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\shape_rec_50_50_grey.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\src\\main\\res\\drawable\\shape_rec_50_50_grey.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\thumb.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\src\\main\\res\\drawable\\thumb.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\shape_dialog_activity_cornor.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\src\\main\\res\\drawable\\shape_dialog_activity_cornor.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_vector_test.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.2.0\\res\\drawable\\abc_vector_test.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\notification_tile_bg.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.2.0\\res\\drawable\\notification_tile_bg.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_dialog_material_background.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.2.0\\res\\drawable\\abc_dialog_material_background.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_launcher_background.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\notification_bg.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.2.0\\res\\drawable\\notification_bg.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\selector_pop_window.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\src\\main\\res\\drawable\\selector_pop_window.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\selector_music_btn.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\src\\main\\res\\drawable\\selector_music_btn.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ratingbar_indicator_material.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.2.0\\res\\drawable\\abc_ratingbar_indicator_material.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\animation_play_left.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\src\\main\\res\\drawable\\animation_play_left.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_btn_borderless_material.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.2.0\\res\\drawable\\abc_btn_borderless_material.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\edit_input_bg.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\src\\main\\res\\drawable\\edit_input_bg.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\shape_status_bg.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\src\\main\\res\\drawable\\shape_status_bg.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_ab_back_material.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.2.0\\res\\drawable\\abc_ic_ab_back_material.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\notification_bg_low.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.2.0\\res\\drawable\\notification_bg_low.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\animation_loading.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\src\\main\\res\\drawable\\animation_loading.xml"
+    }
+]

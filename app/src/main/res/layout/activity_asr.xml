@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.turing.turingsdksample.ui.ContentLayout
+        android:id="@+id/userlayout"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_margin="10dp">
+
+    </com.turing.turingsdksample.ui.ContentLayout>
+
+    <com.turing.turingsdksample.ui.BottomLayout
+        android:id="@+id/base_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dp"></com.turing.turingsdksample.ui.BottomLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@id/base_bottom"
+        android:background="@color/color_gray" />
+    <RelativeLayout
+        android:id="@+id/rel_status"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_above="@id/base_bottom"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="5dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_status"
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/shape_status_bg"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:textSize="15sp" />
+    </RelativeLayout>
+</RelativeLayout>

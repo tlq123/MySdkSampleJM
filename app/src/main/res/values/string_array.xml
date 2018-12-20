@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="tts_speed_value">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+    </string-array>
+    <string-array name="tts_volume_value">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+    </string-array>
+    <string-array name="tts_pitch_value">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+    </string-array>
+    <string-array name="tts_effect_value">
+        <item>无音效</item>
+        <item>混响</item>
+        <item>回声</item>
+        <item>合唱</item>
+        <item>忽远忽近</item>
+        <item>机器人</item>
+    </string-array>
+
+    <string-array name="tts_effect_value_string">
+        <item>base</item>
+        <item>reverb</item>
+        <item>echo</item>
+        <item>chorus</item>
+        <item>nearfar</item>
+        <item>robot</item>
+    </string-array>
+</resources>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">childrenSdkMusicAPI</string>
+    <string name="has_been_expired">SDK过期了</string>
+    <string name="no_content">没有搜索到内容</string>
+</resources>

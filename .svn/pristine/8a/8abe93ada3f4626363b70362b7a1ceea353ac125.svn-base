@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: semantic-release:@aar">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/semantic-release/res" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/semantic-release/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

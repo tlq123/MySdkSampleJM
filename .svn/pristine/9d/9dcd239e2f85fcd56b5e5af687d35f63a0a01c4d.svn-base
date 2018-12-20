@@ -1,0 +1,327 @@
+package com.turing.turingsdksample.demo_common;
+
+import android.content.Context;
+import android.content.Intent;
+import android.media.AudioManager;
+import android.media.MediaPlayer;
+import android.media.MediaPlayer.OnPreparedListener;
+import android.media.MediaPlayer.OnCompletionListener;
+import android.media.MediaPlayer.OnErrorListener;
+import com.turing.turingsdksample.util.Logger;
+
+import java.io.IOException;
+import java.util.Timer;
+import java.util.TimerTask;
+
+/**
+ * Created by tlq on 2017/11/24.
+ * 音频 播放
+ */
+public class MediaMusicUtil {
+
+    private static String TAG = "MediaMusicUtil";
+    private static Context mContext;
+    private static MediaMusicUtil mInstance;
+    private  MediaPlayer mp ;
+    private  MediaPlayer mpRes ;  //播放本地资源音频
+    private  OnCompletionListener mCompletionListener ;
+    private  OnErrorListener mErrorListener ;
+    private  OnPreparedListener onPreparedListener ;
+    private  ImusicListener mImusicListener ;
+
+    public interface ImusicListener{
+        void OnMusicCompletion();
+        void OnMusicError();
+        void OnMusicStop();
+        void OnMusicPause();
+    }
+
+    public static MediaMusicUtil getInstance(){
+        if(mInstance == null){
+            synchronized (MediaMusicUtil.class){
+                mInstance = new MediaMusicUtil();
+            }
+        }
+        return mInstance;
+    }
+
+    /*
+    初始化
+     */
+    public  void initMusic(Context context ,ImusicListener imusicListener){
+        mImusicListener = imusicListener ;
+        mContext = context ;
+        mCompletionListener = new OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mediaPlayer) {
+                Logger.i(TAG, "setOnCompletionListener----:");
+                mImusicListener.OnMusicCompletion();
+            }
+        };
+        mErrorListener = new OnErrorListener() {
+            @Override
+            public boolean onError(MediaPlayer mediaPlayer, int i, int i1) {
+                Logger.i(TAG, "setOnErrorListener----:");
+                mImusicListener.OnMusicError();
+                return false;
+            }
+        } ;
+        onPreparedListener = new OnPreparedListener() {
+            @Override
+            public void onPrepared(MediaPlayer mediaPlayer) {
+                if(mp != null ){
+                    if(position != 0){
+                        mp.seekTo(position);
+                    }
+                    mp.start();
+                }
+            }
+        };
+
+
+    }
+
+    /**
+     * 播放音频  本地资源音频
+     */
+    public  void startPlayMediaRes(int res){
+
+        Logger.i(TAG, "播放本地音频资源");
+        if( mpRes != null ){
+            if( mpRes.isPlaying() ){
+                mpRes.stop();
+            }
+            mpRes.reset();
+            mpRes = null ;
+        }
+        mpRes = MediaPlayer.create(mContext, res);
+        mpRes.start();
+    }
+
+    /**
+     * 停止音频  本地资源音频
+     */
+    public  void stopPlayMediaRes(){
+        Logger.i(TAG, "停止本地音频");
+        if( mpRes != null ){
+            if( mpRes.isPlaying() ){
+                mpRes.stop();
+            }
+            mpRes.reset();
+            mpRes = null ;
+        }
+    }
+
+    /**
+     * 播放音频  网络音频
+     */
+    public  void startPlayMediaUrl(String url){
+
+        Logger.i(TAG, "播放网络音频资源----url:"+url);
+        if( mp == null ){
+            mp = new MediaPlayer() ;
+        }else {
+            if( mp.isPlaying() ){
+                mp.stop();
+            }
+            mp.reset();
+        }
+        try {
+            mp.setDataSource(url);
+            mp.setOnCompletionListener(mCompletionListener);
+            mp.setOnErrorListener(mErrorListener);
+            mp.setOnPreparedListener(onPreparedListener);
+            mp.prepareAsync();
+        } catch (IOException e) {
+            e.printStackTrace();
+            Logger.i(TAG, "startPlayMedia----e:"+e.getMessage());
+        }
+    }
+
+    private int position ;
+    /**
+     * 播放音频  网络音频 跳转到指定位置
+     */
+    public  void startPlayMediaUrl(String url ,int seekPosiont){
+        position = seekPosiont ;
+        Logger.i(TAG, "播放网络音频资源----url:"+url+"  position:"+seekPosiont);
+        if( mp == null ){
+            mp = new MediaPlayer() ;
+        }else {
+            if( mp.isPlaying() ){
+                mp.stop();
+            }
+            mp.reset();
+        }
+        try {
+            mp.setDataSource(url);
+            mp.setOnCompletionListener(mCompletionListener);
+            mp.setOnErrorListener(mErrorListener);
+            mp.setOnPreparedListener(onPreparedListener);
+            mp.prepareAsync();
+        } catch (IOException e) {
+            e.printStackTrace();
+            Logger.i(TAG, "startPlayMedia seekPosiont----e:"+e.getMessage());
+        }
+    }
+
+    /**
+     * 停止播放音乐
+     */
+    public  void stopPlayMediaUrl(){
+        Logger.i(TAG, "停止网络音频----:");
+        if( mp != null ){
+            if( mp.isPlaying() ){
+                mp.stop();
+            }
+            mp.reset();
+            mImusicListener.OnMusicStop();
+        }
+    }
+
+    /**
+     * 暂停后播放音乐
+     */
+    public  void startPlayMedia(){
+        Logger.i(TAG, "stopPlayMedia----:");
+        if(mp != null && !mp.isPlaying()){
+            mp.start();
+        }
+    }
+
+    /**
+     * 暂停播放音乐
+     */
+    public  void pausePlayMedia(){
+        Logger.i(TAG, "stopPlayMedia----:");
+        if(mp != null && mp.isPlaying()){
+            mp.pause();
+            mImusicListener.OnMusicPause();
+        }
+    }
+
+
+    /*
+    释放音频
+     */
+    public  void releasePlayMedia(){
+        Logger.i(TAG, "releasePlayMedia----结束音乐");
+        if(mp != null){
+            if(mp.isPlaying()){
+                mp.stop();
+            }
+            mp.release();
+            mp = null ;
+        }
+        if(mpRes != null){
+            if(mpRes.isPlaying()){
+                mpRes.stop();
+            }
+            mpRes.release();
+            mpRes = null ;
+        }
+    }
+
+    public int getCurPosition(){
+        int posiont = 0 ;
+        if( mp != null ){
+            posiont = mp.getCurrentPosition();
+        }
+        return  posiont ;
+    }
+
+    /*
+    中科汇联 关机使用
+     */
+    public void startPlayMediaPowerOff(final int res){
+
+        stopPlayMediaUrl();
+        stopPlayMediaRes();
+        mpRes = MediaPlayer.create(mContext, res);
+        mpRes.start();
+        mpRes.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mediaPlayer) {
+                Logger.i(TAG,"OnCompletionListener 关机。。。。。。。。。。。。。。");
+                Intent intent = new Intent();
+                intent.setAction("com.auric.intell.xld.os.poweroff.anim");
+                mContext.sendBroadcast(intent);
+            }
+        });
+        mpRes.setOnErrorListener(new MediaPlayer.OnErrorListener() {
+            @Override
+            public boolean onError(MediaPlayer mediaPlayer, int i, int i1) {
+                Logger.i(TAG,"OnErrorListener 关机。。。。。。。。。。。。。。");
+                Intent intent = new Intent();
+                intent.setAction("com.auric.intell.xld.os.poweroff.anim");
+                mContext.sendBroadcast(intent);
+                return false;
+            }
+        });
+
+
+    }
+
+    /*
+    语义调节音乐声音
+     */
+    public  String setVolume(int operateState,String tts){
+        //改变音量
+        AudioManager am = (AudioManager) mContext.getSystemService(Context.AUDIO_SERVICE);
+        int max = am.getStreamMaxVolume(AudioManager.STREAM_MUSIC);// 1
+        int current = am.getStreamVolume(AudioManager.STREAM_MUSIC);
+        Logger.i(TAG, "系统音量值：" + max + "-" + current);
+        if(operateState == 1010){//音量变大
+            if(current<max){
+                am.setStreamVolume(AudioManager.STREAM_MUSIC, current+1, AudioManager.FLAG_PLAY_SOUND);
+            }else{
+                tts = "已经是最大音量了";
+            }
+        }else if(operateState == 1011){//音量变小
+            if(current>1){
+                am.setStreamVolume(AudioManager.STREAM_MUSIC, current-1, AudioManager.FLAG_PLAY_SOUND);
+            }else{
+                tts = "已经是最小音量了";
+            }
+        }
+        return  tts ;
+    }
+
+    private static int tempV  ;
+    /*
+        设置来电铃声
+     */
+    public static void setVolume() {
+        //改变音量
+        final AudioManager am = (AudioManager) mContext.getSystemService(Context.AUDIO_SERVICE);
+        final int max = am.getStreamMaxVolume(AudioManager.STREAM_RING);//  STREAM_MUSIC
+        int current = am.getStreamVolume(AudioManager.STREAM_RING);
+        tempV = 1 ;
+        final Timer timer = new Timer();
+        timer.scheduleAtFixedRate(new TimerTask() {
+            @Override
+            public void run() {
+                int volume = max - tempV ;
+                tempV ++ ;
+                Logger.i(TAG, "系统音量值:" + volume + "  tempV:"+tempV);
+                if(volume <= 2) {
+                    timer.cancel();
+                }else {
+                    am.setStreamVolume(AudioManager.STREAM_RING, volume , AudioManager.FLAG_PLAY_SOUND);
+                }
+
+            }
+        }, 500, 1000);
+    }
+
+    /*
+    将铃声调整到中间
+     */
+    public static void setVolumeMedium() {
+        //改变音量
+        final AudioManager am = (AudioManager) mContext.getSystemService(Context.AUDIO_SERVICE);
+        final int max = am.getStreamMaxVolume(AudioManager.STREAM_RING);//  STREAM_MUSIC
+        am.setStreamVolume(AudioManager.STREAM_RING, max/2 , AudioManager.FLAG_PLAY_SOUND);
+    }
+
+}

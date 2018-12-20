@@ -1,0 +1,298 @@
+[
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple_overlay_action_mode.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.2.0\\res\\layout\\abc_screen_simple_overlay_action_mode.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_singlechoice_material.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.2.0\\res\\layout\\select_dialog_singlechoice_material.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_base.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\src\\main\\res\\layout\\activity_base.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\layout\\base_header.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\src\\main\\res\\layout\\base_header.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_time.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.2.0\\res\\layout\\notification_template_part_time.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_title_item.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.2.0\\res\\layout\\abc_action_bar_title_item.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_view_list_nav_layout.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.2.0\\res\\layout\\abc_action_bar_view_list_nav_layout.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_item_layout.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.2.0\\res\\layout\\abc_action_menu_item_layout.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\layout\\base_bottom.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\src\\main\\res\\layout\\base_bottom.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\layout\\base_content.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\src\\main\\res\\layout\\base_content.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_initdemo.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\src\\main\\res\\layout\\activity_initdemo.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\layout\\dmt_adapter_visualresult_tips.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\src\\main\\res\\layout\\dmt_adapter_visualresult_tips.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\layout\\adapter_listview_content.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\src\\main\\res\\layout\\adapter_listview_content.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\layout\\dmt_adapter_left_music.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\src\\main\\res\\layout\\dmt_adapter_left_music.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_layout.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.2.0\\res\\layout\\abc_list_menu_item_layout.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_asr.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\src\\main\\res\\layout\\activity_asr.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_lines_media.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.2.0\\res\\layout\\notification_template_lines_media.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_title_material.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.2.0\\res\\layout\\abc_alert_dialog_title_material.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\layout\\rel_cameraview.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\src\\main\\res\\layout\\rel_cameraview.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\layout\\dmt_adapter_camera_before.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\src\\main\\res\\layout\\dmt_adapter_camera_before.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_view.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.2.0\\res\\layout\\abc_search_view.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_semantic.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\src\\main\\res\\layout\\fragment_semantic.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_tts.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\src\\main\\res\\layout\\fragment_tts.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_authority.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\src\\main\\res\\layout\\fragment_authority.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.2.0\\res\\layout\\abc_activity_chooser_view.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\layout\\support_simple_spinner_dropdown_item.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.2.0\\res\\layout\\support_simple_spinner_dropdown_item.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_asrdemo.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\src\\main\\res\\layout\\activity_asrdemo.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_all.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\src\\main\\res\\layout\\activity_all.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_button_bar_material.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.2.0\\res\\layout\\abc_alert_dialog_button_bar_material.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_media_custom.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.2.0\\res\\layout\\notification_template_media_custom.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_music.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\src\\main\\res\\layout\\fragment_music.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_start.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\src\\main\\res\\layout\\activity_start.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_multichoice_material.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.2.0\\res\\layout\\select_dialog_multichoice_material.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\layout\\dmt_adapter_function_tips.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\src\\main\\res\\layout\\dmt_adapter_function_tips.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\layout\\pop_window.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\src\\main\\res\\layout\\pop_window.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_toolbar.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.2.0\\res\\layout\\abc_screen_toolbar.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_common_tts_demo.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\src\\main\\res\\layout\\activity_common_tts_demo.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_material.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.2.0\\res\\layout\\abc_alert_dialog_material.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\layout\\dialog_cricle_progress.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\src\\main\\res\\layout\\dialog_cricle_progress.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_login.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\src\\main\\res\\layout\\activity_login.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\layout\\base_parse.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\src\\main\\res\\layout\\base_parse.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_bar.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.2.0\\res\\layout\\abc_action_mode_bar.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_radio.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.2.0\\res\\layout\\abc_list_menu_item_radio.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_layout.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.2.0\\res\\layout\\abc_action_menu_layout.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_httpdemo.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\src\\main\\res\\layout\\activity_httpdemo.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_select_dialog_material.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.2.0\\res\\layout\\abc_select_dialog_material.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\layout\\dmt_adapter_right.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\src\\main\\res\\layout\\dmt_adapter_right.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_popup_menu_item_layout.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.2.0\\res\\layout\\abc_popup_menu_item_layout.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.2.0\\res\\layout\\abc_screen_simple.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_close_item_material.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.2.0\\res\\layout\\abc_action_mode_close_item_material.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_tts.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\src\\main\\res\\layout\\activity_tts.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_icon.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.2.0\\res\\layout\\abc_list_menu_item_icon.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_asrandttsdemo.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\src\\main\\res\\layout\\activity_asrandttsdemo.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_content_include.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.2.0\\res\\layout\\abc_screen_content_include.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_asr.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\src\\main\\res\\layout\\fragment_asr.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_up_container.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.2.0\\res\\layout\\abc_action_bar_up_container.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_popup_menu_header_item_layout.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.2.0\\res\\layout\\abc_popup_menu_header_item_layout.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_adapter.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\src\\main\\res\\layout\\activity_adapter.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_media.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.2.0\\res\\layout\\notification_template_media.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view_list_item.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.2.0\\res\\layout\\abc_activity_chooser_view_list_item.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_iot.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\src\\main\\res\\layout\\fragment_iot.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_dropdown_item_icons_2line.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.2.0\\res\\layout\\abc_search_dropdown_item_icons_2line.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_setting_tts.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\src\\main\\res\\layout\\activity_setting_tts.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\layout\\dmt_adapter_left_text.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\src\\main\\res\\layout\\dmt_adapter_left_text.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\layout\\pop_item_select.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\src\\main\\res\\layout\\pop_item_select.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_dialog_title_material.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.2.0\\res\\layout\\abc_dialog_title_material.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_ttsdemo.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\src\\main\\res\\layout\\activity_ttsdemo.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_expanded_menu_layout.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.2.0\\res\\layout\\abc_expanded_menu_layout.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\layout\\notification_template_part_chronometer.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.2.0\\res\\layout\\notification_template_part_chronometer.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_checkbox.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.2.0\\res\\layout\\abc_list_menu_item_checkbox.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\layout\\common_dialog_activity.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\src\\main\\res\\layout\\common_dialog_activity.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_item_material.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.2.0\\res\\layout\\select_dialog_item_material.xml"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_demo.xml",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\src\\main\\res\\layout\\activity_demo.xml"
+    }
+]

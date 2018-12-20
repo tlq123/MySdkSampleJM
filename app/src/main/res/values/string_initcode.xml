@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="init_tts_error1010">tts初始化失败，请先初始化TTS</string>
+    <string name="init_asr_error1110">asr初始化失败，请先初始化ASR</string>
+    <string name="init_userid_error1210">userid初始化失败，请先初始化userid</string>
+</resources>

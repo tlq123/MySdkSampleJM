@@ -1,0 +1,193 @@
+<resources>
+    <string name="app_name">儿童SDKSample</string>
+    <string name="start_asr">开始asr</string>
+    <string name="stop_asr">停止asr</string>
+    <string name="result_show">结果展示区</string>
+    <string name="please_request_show">请输入请求</string>
+    <string name="warn_content_isnull">输入内容不能为空</string>
+    <string name="start_request">开始请求</string>
+    <string name="asr_recording">正在录音中...</string>
+    <string name="start_init">开始初始化</string>
+    <string name="api_key">apikey:</string>
+    <string name="please_input_apikey">请输入apikey</string>
+    <string name="secret">secret:</string>
+    <string name="please_input_secret">请输入secret</string>
+    <string name="initsdk_success">初始化成功</string>
+    <string name="initsdk_error">初始化失败</string>
+    <string name="please_initsdk_success">请先初始化成功后，才能使用该功能</string>
+    <string name="loading_http">正在进行请求...</string>
+    <string name="stop_tts">停止tts</string>
+    <string name="init_userId">初始化userId</string>
+    <string name="init_tts">初始化tts</string>
+    <string name="init_asr">初始化asr</string>
+    <string name="init_userId_success">初始化userId成功</string>
+    <string name="init_tts_success">初始化tts成功</string>
+    <string name="init_asr_success">初始化asr成功</string>
+    <string name="start_tts">开始tts</string>
+    <string name="recoding_error">录音失败，请检查网络</string>
+    <string name="tts_speed">tts音速：</string>
+    <string name="tts_volume">tts音量：</string>
+    <string name="tts_pitch">tts音准：</string>
+    <string name="tts_effect">tts音效：</string>
+    <string name="tips_please_input_msg">请输入内容</string>
+    <string name="play_music">播放音乐</string>
+    <string name="sure">确定</string>
+    <string name="music">音乐</string>
+    <string name="login">登录</string>
+    <string name="apikey">输入APIKey</string>
+    <string name="secret_hint">输入Secret</string>
+    <string name="login_success">登录成功</string>
+    <string name="login_failed">登录失败</string>
+    <string name="turingsdk_cn">TuringSdk CN 登录</string>
+    <string name="param_not_null">参数不能为空</string>
+    <string name="iot">IOT</string>
+
+    <string name="turing_appkey"></string>
+    <string name="turing_secret"></string>
+    <string name="pop_semantic">语义请求</string>
+    <string name="tips">提示</string>
+    <string name="replace_tips">请在string.xml的替换图灵授权的TURING_APIKEY和TURING_SECRET</string>
+    <string name="str_upload_deviceinfo">上传通讯录与APP列表</string>
+    <string name="str_semantic_timeout_null">请输入数字</string>
+    <string name="str_semantic_success">请求成功,结果:</string>
+    <string name="str_semantic_error">请求失败,失败信息:</string>
+    <string name="str_semantic_cancel">请求被取消</string>
+    <string name="str_semantic_upload_success">上传成功,返回结果:</string>
+    <string name="str_semantic_upload_error">上传失败,失败信息:</string>
+    <string name="str_semantic_upload_cancel">上传请求被取消</string>
+    <string name="et_hint_semantic_request">输入请求内容</string>
+    <string name="btn_semantic_request">请求语义</string>
+    <string name="btn_semantic_greet">打招呼</string>
+    <string name="btn_semantic_active">主动交互</string>
+    <string name="btn_semantic_upload">上传信息</string>
+    <string name="btn_semantic_cancel">取消请求</string>
+    <string name="et_hint_semantic_timeout">输入超时时间</string>
+    <string name="btn_semantic_timeout">设置超时时间</string>
+    <string name="str_response_null">返回结果为空</string>
+    <string name="btn_semantic_request_with_clientinfo">附带客户端信息请求语义</string>
+    <string name="et_hint_semantic_robot_id">请输入应用Code</string>
+    <string name="et_hint_semantic_robot_data">请输入要上传的数据，测试格式为 key:value;key2:value2……</string>
+
+
+
+    <string name="cancel">取消</string>
+    <string name="set_manual">设置手动识别</string>
+    <string name="autostr">现在是自动模式,切换成手动模式</string>
+    <string name="manualstr">现在是手动模式,切换成自动模式</string>
+    <string name="init_failed">初始化失败:</string>
+    <string name="before_vad">设置前置VAD</string>
+    <string name="after_vad">后置VAD: %d</string>
+    <string name="before_wrap">前置VAD: %d</string>
+
+
+    <string name="say_what">你要说的话</string>
+    <string name="type_tips">tts类型 0 捷通离线 1捷通在线 默认1</string>
+    <string name="volume">音量</string>
+    <string name="tone">音色</string>
+    <string name="ttsengine">tts引擎</string>
+    <string name="init_first">初始化</string>
+    <string name="no_authority">有权限没有授权成功哦</string>
+
+    <array name="tone_array">
+        <item>XIXI</item>
+        <item>LIANGJIANHE</item>
+        <item>CARTOONJING_TONE</item>
+        <item>HAOBO_TONE</item>
+        <item>CAMEAL_TONE</item>
+        <item>BARRON_TONE</item>
+        <item>ZHANGNAN_TONE</item>
+        <item>WANGJING_TONE</item>
+        <item>XIAOKUN_TONE</item>
+        <item>DIAOXIONG_TONE</item>
+        <item>JIANGMAN_TONE</item>
+        <item>SHENXU_TONE</item>
+        <item>ZHAQIAN_TONE</item>
+        <item>XIAOJIE_TONE</item>
+        <item>ZHIWA_TONE</item>
+        <item>AQ_TONE</item>
+        <item>HUITING_TONE</item>
+    </array>
+    <array name="tone_offline">
+        <item>XIXI</item>
+        <item>BAISONG_COMMON</item>
+        <item>ZHANGNAN_COMMON</item>
+    </array>
+
+    <array name="type_array">
+        <item>离线</item>
+        <item>在线</item>
+    </array>
+
+    <string name="init_manifest">manifest初始化.不读输入配置</string>
+    <string name="init_set">set初始化，获取输入</string>
+    <string name="input_apikey">输入apikey</string>
+    <string name="input_scret">输入secret</string>
+    <string name="type_tips_authority">type类型有:imei mac android_id uuid.serial_number custom不写按默认顺序读取</string>
+    <string name="get_device_id">获取deviceId</string>
+    <string name="authority">权限请求</string>
+    <string name="userid">获取userid</string>
+    <string name="devicetype">获取deviceType</string>
+    <string name="get_apikey">获取apikey</string>
+    <string name="get_secret">获取secret</string>
+    <string name="type_custom_device_id">如果type类型为custom.这里需要填写device id</string>
+    <string name="authority_success">授权成功 userId=</string>
+    <string name="authority_failed">授权失败:</string>
+    <string name="init_success">初始化成功</string>
+    <string name="param_cannot_null">参数不能为空</string>
+    <string name="cannot_release">已经释放过或未初始化</string>
+    <string name="discover_start">发现已开启</string>
+    <string name="discover_stop">已停止发现</string>
+
+
+    <string name="specific">指定类型初始化</string>
+    <string name="online_tts">现在是在线初始化,点击进入离线初始化</string>
+    <string name="offline_tts">现在是离线初始化,点击进入在线初始化</string>
+    <string name="hot_words">上传热词</string>
+    <string name="upload_success">上传成功</string>
+    <string name="upload_failed">上传失败</string>
+    <string name="zhangsan">张珊</string>
+    <string name="asr_single_mode">当前是ASR单次识别模式,点击切换成ASR循环识别模式</string>
+    <string name="asr_loop_mode">当前是ASR循环识别模式,点击切换成ASR单次识别模式</string>
+
+
+    <array name="effect_array">
+        <item>base</item>
+        <item>robot</item>
+    </array>
+
+    <string name="open_enhancer">现在是开启增强效果,点击关闭增强模式</string>
+    <string name="close_enhancer">现在是关闭增强模式，点击开启增强模式</string>
+    <string name="speed">语速</string>
+    <string name="effect">音效</string>
+    <string name="enhancer_text">增强效果</string>
+
+    <string name="network_error">网络慢.缓冲失败</string>
+    <string name="init_qtt">初始化MQTT</string>
+    <string name="connect_mqtt">连接MQTT</string>
+    <string name="mqtt_sender">MQTT发送</string>
+    <string name="mqtt_disconnect">MQTT断开</string>
+    <string name="get_bind">获取绑定码</string>
+
+
+    <string name="mqtt_state">获取mqtt连接状态</string>
+    <string name="disconnected">已经断开</string>
+    <string name="connected">已经连接</string>
+    <string name="connecting">正在连接..</string>
+    <!--Music模块-->
+    <string name="already_release">已经release了:</string>
+    <string name="duration">获取最大进度</string>
+    <string name="progress">获取播放进度</string>
+    <string name="comeon">继续</string>
+    <string name="stop">停止</string>
+    <string name="pause">暂停</string>
+    <string name="play">播放</string>
+    <string name="input_search">输入你要搜索的歌曲</string>
+    <string name="qilixiang">七里香</string>
+    <string name="init">初始化</string>
+    <string name="search">搜索</string>
+    <string name="page_search">Page搜索</string>
+    <string name="seekto">快进到指定位置</string>
+    <string name="release">release</string>
+    <string name="next">下一首</string>
+    <string name="hint_channelID">输入咪咕渠道号</string>
+</resources>

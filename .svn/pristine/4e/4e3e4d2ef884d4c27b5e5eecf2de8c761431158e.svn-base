@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="title_name">Turing SDK CN</string>
+    <string name="click_asr_start">点按讲话</string>
+    <string name="click_asr_stop">点按停止</string>
+    <string name="content_text">文本：</string>
+    <string name="content_emotion">心情：</string>
+    <string name="content_code">功能：</string>
+    <string name="user">用户</string>
+    <string name="robot">机器人</string>
+    <string name="request_data">请求结果</string>
+    <string name="personvsrobot">人机对话</string>
+    <string name="text_asr">ASR</string>
+    <string name="text_tts">TTS</string>
+    <string name="tts_start">TTS开始</string>
+    <string name="tts_stop">停止</string>
+    <string name="tts_send">发送</string>
+    <string name="asring">正在进行ASR</string>
+    <string name="paresing">正在进行解析</string>
+    <string name="you_send_cmd">你发出了一条指令 %1$s</string>
+    <string name="ok">好的</string>
+    <string name="resume_exit">再按一次退出应用</string>
+    <string name="not_net">当前没有网络，请检查</string>
+    <string name="has_net">网络正常，可以使用</string>
+    <string name="visual_init_error">视觉初始化失败</string>
+    <string name="facing_image">正在识别</string>
+    <string name="no_promission">没有获取到应用的权限，功能无法使用</string>
+    <string name="http_ing_resource">正在请求资源</string>
+
+</resources>

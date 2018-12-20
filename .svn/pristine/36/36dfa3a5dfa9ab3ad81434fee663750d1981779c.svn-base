@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TTS demo</string>
+    <string name="has_been_expired">SDK没有初始化</string>
+    <string name="no_content">没有搜索到内容</string>
+    <string name="sdk_not_init">SDK没有初始化</string>
+    <string name="ttstype_lingyun">灵云</string>
+    <string name="ttstype_not_find">没有发现指定的TTS引擎类型，请仔细检查传入的TTSType是否正确</string>
+    <string name="ttstype_offline">offline</string>
+    <string name="ttstype_online">online</string>
+</resources>

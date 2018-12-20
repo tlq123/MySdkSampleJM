@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.turing.turingsdksample.ui.ContentLayout
+        android:id="@+id/userlayout"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_margin="10dp">
+
+    </com.turing.turingsdksample.ui.ContentLayout>
+
+    <com.turing.turingsdksample.ui.BottomLayout
+        android:id="@+id/base_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dp"></com.turing.turingsdksample.ui.BottomLayout>
+
+    <ImageView
+        android:id="@+id/iv_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@id/base_bottom"
+        android:background="@color/color_gray" />
+</RelativeLayout>

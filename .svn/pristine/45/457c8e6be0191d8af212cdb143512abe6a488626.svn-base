@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: common-release:@aar">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/common-release/res" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/common-release/jars/libs/hcicloud-5.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/common-release/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

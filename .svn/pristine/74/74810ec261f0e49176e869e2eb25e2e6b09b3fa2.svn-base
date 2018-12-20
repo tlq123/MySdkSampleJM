@@ -1,0 +1,23 @@
+package com.turing.turingsdksample.constants;
+
+/**
+ * @author：licheng@uzoo.com
+ */
+
+public class ConstantsUtil {
+
+    /*MQTT帐号*/
+    public static final String MQTT_APP_KEY = "77ff2ce680b540e7991ccb79700b7b74";
+    public static final String MQTT_NAME = "77ff2ce680b540e7991ccb79700b7b74";
+    public static final String MQTT_PWD = "08b3cfe5";
+//    public static final String MQTT_APP_KEY = "b78db4bd4c964112b481aed1a6594da8";
+//    public static final String MQTT_NAME = "b78db4bd4c964112b481aed1a6594da8";
+//    public static final String MQTT_PWD = "cd8611b8";
+
+         public static final String API_KEY = "4f1a4af7c97b47b1ad48e38c2d28c2f2";
+         public static final String API_SECRET = "02wGKa0L4gUD60J4";
+//    public static final String API_KEY = "b78db4bd4c964112b481aed1a6594da8";
+//    public static final String API_SECRET = "O9R3Q98fXkBGQccl";
+
+    public static final String DORMANCY = "我去休息了，想我了就叫小智小智" ;
+}

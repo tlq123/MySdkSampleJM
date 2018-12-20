@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="duo_status_vs">多模态对话</string>
+    <string name="camera_before_please_see">请正对镜头，机器人正在辨认你的身份</string>
+    <string name="please_input_name">请填写姓名</string>
+    <string name="please_input_loading">正在录入，请稍等</string>
+    <string name="who_i_am">我是谁。|我是谁|我是哪位|我是岁</string>
+    <string name="no_person_lookfor">没有找到小主人，直接对话喽</string>
+    <string name="tips_hello">你好</string>
+    <string name="no_user">未知用户</string>
+    <string name="tips_inser_face">好眼熟啊，能告诉我你的名字吗？</string>
+    <string name="tip_bubble_know_you">机器人认识你，%1$s</string>
+    <string name="tip_bubble_no_person">机器人暂时不认识你</string>
+    <string name="tip_bubble_insert_new_friends">机器人认识一个新朋友，%1$s</string>
+    <string-array name="first_enter_no_person">
+        <item>你好，快来和我聊天吧!:0:10300</item>
+    </string-array>
+    <string-array name="first_enter_new_insert_success">
+        <item>好的，%1$s，记住了，以后也不会忘。:1:10500</item>
+        <item>%1$s，那下次见面就这么叫你啦！:1:10500</item>
+    </string-array>
+    <string-array name="first_enter_new_insert_fail">
+        <item>好复杂，下次见面再认识你吧！:0:10800</item>
+    </string-array>
+    <string-array name="first_enter_see_know_person">
+        <item>你好，%1$s，快来和我聊天吧！:1:10300</item>
+        <item>我最好的朋友%1$s来了。:1:10300</item>
+        <item>%1$s,%1$s，终于等到你了。:2:10300</item>
+        <item>好久不见，%1$s。:1:10300</item>
+        <item>%1$s来了，我好开心。:1:10300</item>
+        <item>%1$s，听说你找我有事。:1:10300</item>
+        <item>%1$s，见到你真好！:1:10300</item>
+    </string-array>
+
+    <string-array name="WHOIAM_enter_no_person">
+        <item>你在哪儿，我怎么看不到你啊？:0:10800</item>
+        <item>你快站到我面前，先让我看见你。:0:10800</item>
+        <item>让我看到你的脸，我才能知道你是谁。:0:10800</item>
+    </string-array>
+    <string-array name="WHOIAM_enter_new_insert_success">
+        <item>好的，%1$s，记住了，以后也不会忘。:1:10500</item>
+        <item>%1$s，那下次见面就这么叫你啦！:1:10500</item>
+    </string-array>
+    <string-array name="WHOIAM_enter_new_insert_fail">
+        <item>好复杂，下次见面再认识你吧！:0:10800</item>
+    </string-array>
+    <string-array name="WHOIAM_enter_see_know_person">
+        <item>当然知道，你是%1$s:1:10400</item>
+        <item>你就是大名鼎鼎的%1$s呀:1:10400</item>
+        <item>叫你%1$s，你答应吗？:1:10400</item>
+        <item>%1$s，我说对了吧。:1:10400</item>
+        <item>%1$s，%1$s，%1$s， 重要的事情说三遍。:3:10400</item>
+        <item>认得呀，你是%1$s！:1:10400</item>
+        <item>%1$s。:1:10400</item>
+    </string-array>
+</resources>

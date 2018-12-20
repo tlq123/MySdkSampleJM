@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rel_person"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:background="@drawable/selector_pop_window">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/personvsrobot" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rel_asr"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:background="@drawable/selector_pop_window">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/text_asr" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rel_tts"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:background="@drawable/selector_pop_window">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/text_tts" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rel_duo"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:background="@drawable/selector_pop_window">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/duo_status_vs" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rel_music"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:background="@drawable/selector_pop_window">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/music" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rel_iot"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:background="@drawable/selector_pop_window">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/iot" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rel_semantic"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:background="@drawable/selector_pop_window">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/pop_semantic" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rel_authority"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:background="@drawable/selector_pop_window">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/authority" />
+    </RelativeLayout>
+</LinearLayout>
