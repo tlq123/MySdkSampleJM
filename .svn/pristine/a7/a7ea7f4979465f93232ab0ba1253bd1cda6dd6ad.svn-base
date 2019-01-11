@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: turingmusic_mg:@aar">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/turingmusic_mg/res" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/turingmusic_mg/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: authority-release:@aar">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/authority-release/res" />
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/authority-release/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

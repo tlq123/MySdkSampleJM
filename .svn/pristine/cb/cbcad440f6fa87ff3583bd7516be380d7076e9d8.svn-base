@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "E:\\as_my_project\\MySdkSampleJM\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\ic_launcher.png",
+        "source": "E:\\as_my_project\\MySdkSampleJM\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\ic_launcher.png",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSampleJM\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\ic_launcher_round.png",
+        "source": "E:\\as_my_project\\MySdkSampleJM\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi\\ic_launcher_round.png",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
+    }
+]

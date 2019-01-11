@@ -1,0 +1,130 @@
+[
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\raw\\duck.mp3",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\src\\main\\res\\raw\\duck.mp3"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSampleJM\\app\\build\\intermediates\\res\\merged\\debug\\raw\\net_disconnect.mp3",
+        "source": "E:\\as_my_project\\MySdkSampleJM\\app\\src\\main\\res\\raw\\net_disconnect.mp3"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\raw\\qvoice.zip",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\src\\main\\res\\raw\\qvoice.zip"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSampleJM\\app\\build\\intermediates\\res\\merged\\debug\\raw\\net_pre_connect.mp3",
+        "source": "E:\\as_my_project\\MySdkSampleJM\\app\\src\\main\\res\\raw\\net_pre_connect.mp3"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\raw\\net_connected.mp3",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\src\\main\\res\\raw\\net_connected.mp3"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSampleJM\\app\\build\\intermediates\\res\\merged\\debug\\raw\\net_connected.mp3",
+        "source": "E:\\as_my_project\\MySdkSampleJM\\app\\src\\main\\res\\raw\\net_connected.mp3"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSampleJM\\app\\build\\intermediates\\res\\merged\\debug\\raw\\has_enter_setup_type.mp3",
+        "source": "E:\\as_my_project\\MySdkSampleJM\\app\\src\\main\\res\\raw\\has_enter_setup_type.mp3"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSampleJM\\app\\build\\intermediates\\res\\merged\\debug\\raw\\initsdk_fail.mp3",
+        "source": "E:\\as_my_project\\MySdkSampleJM\\app\\src\\main\\res\\raw\\initsdk_fail.mp3"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSampleJM\\app\\build\\intermediates\\res\\merged\\debug\\raw\\qvoice.zip",
+        "source": "E:\\as_my_project\\MySdkSampleJM\\app\\src\\main\\res\\raw\\qvoice.zip"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSampleJM\\app\\build\\intermediates\\res\\merged\\debug\\raw\\write_mac_first.mp3",
+        "source": "E:\\as_my_project\\MySdkSampleJM\\app\\src\\main\\res\\raw\\write_mac_first.mp3"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSampleJM\\app\\build\\intermediates\\res\\merged\\debug\\raw\\speech_end_xiu.mp3",
+        "source": "E:\\as_my_project\\MySdkSampleJM\\app\\src\\main\\res\\raw\\speech_end_xiu.mp3"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\raw\\net_off_hint.mp3",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\src\\main\\res\\raw\\net_off_hint.mp3"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSampleJM\\app\\build\\intermediates\\res\\merged\\debug\\raw\\net_off_hint.mp3",
+        "source": "E:\\as_my_project\\MySdkSampleJM\\app\\src\\main\\res\\raw\\net_off_hint.mp3"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\raw\\happy_see_you.mp3",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\src\\main\\res\\raw\\happy_see_you.mp3"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSampleJM\\app\\build\\intermediates\\res\\merged\\debug\\raw\\checking_net.mp3",
+        "source": "E:\\as_my_project\\MySdkSampleJM\\app\\src\\main\\res\\raw\\checking_net.mp3"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\raw\\checking_net.mp3",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\src\\main\\res\\raw\\checking_net.mp3"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\raw\\power_off.mp3",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\src\\main\\res\\raw\\power_off.mp3"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\raw\\zk_power_off.mp3",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\src\\main\\res\\raw\\zk_power_off.mp3"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\raw\\net_disconnect.mp3",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\src\\main\\res\\raw\\net_disconnect.mp3"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSampleJM\\app\\build\\intermediates\\res\\merged\\debug\\raw\\zk_power_off.mp3",
+        "source": "E:\\as_my_project\\MySdkSampleJM\\app\\src\\main\\res\\raw\\zk_power_off.mp3"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSampleJM\\app\\build\\intermediates\\res\\merged\\debug\\raw\\happy_see_you.mp3",
+        "source": "E:\\as_my_project\\MySdkSampleJM\\app\\src\\main\\res\\raw\\happy_see_you.mp3"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\raw\\write_mac_first.mp3",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\src\\main\\res\\raw\\write_mac_first.mp3"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSampleJM\\app\\build\\intermediates\\res\\merged\\debug\\raw\\power_off.mp3",
+        "source": "E:\\as_my_project\\MySdkSampleJM\\app\\src\\main\\res\\raw\\power_off.mp3"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\raw\\has_enter_setup_type.mp3",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\src\\main\\res\\raw\\has_enter_setup_type.mp3"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\raw\\touch_setup_net.mp3",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\src\\main\\res\\raw\\touch_setup_net.mp3"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\raw\\net_pre_connect.mp3",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\src\\main\\res\\raw\\net_pre_connect.mp3"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSampleJM\\app\\build\\intermediates\\res\\merged\\debug\\raw\\duck.mp3",
+        "source": "E:\\as_my_project\\MySdkSampleJM\\app\\src\\main\\res\\raw\\duck.mp3"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\raw\\initsdk_fail.mp3",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\src\\main\\res\\raw\\initsdk_fail.mp3"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSampleJM\\app\\build\\intermediates\\res\\merged\\debug\\raw\\touch_setup_net.mp3",
+        "source": "E:\\as_my_project\\MySdkSampleJM\\app\\src\\main\\res\\raw\\touch_setup_net.mp3"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\raw\\tiger.mp3",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\src\\main\\res\\raw\\tiger.mp3"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSample\\app\\build\\intermediates\\res\\merged\\debug\\raw\\speech_end_xiu.mp3",
+        "source": "E:\\as_my_project\\MySdkSample\\app\\src\\main\\res\\raw\\speech_end_xiu.mp3"
+    },
+    {
+        "merged": "E:\\as_my_project\\MySdkSampleJM\\app\\build\\intermediates\\res\\merged\\debug\\raw\\tiger.mp3",
+        "source": "E:\\as_my_project\\MySdkSampleJM\\app\\src\\main\\res\\raw\\tiger.mp3"
+    }
+]

@@ -1,0 +1,250 @@
+-- Merging decision tree log ---
+manifest
+ADDED from E:\as_my_project\MySdkSampleJM\app\src\main\AndroidManifest.xml:2:1-81:12
+	package
+		ADDED from E:\as_my_project\MySdkSampleJM\app\src\main\AndroidManifest.xml:3:5-41
+		INJECTED from E:\as_my_project\MySdkSampleJM\app\src\main\AndroidManifest.xml
+		INJECTED from E:\as_my_project\MySdkSampleJM\app\src\main\AndroidManifest.xml
+	android:versionName
+		INJECTED from E:\as_my_project\MySdkSampleJM\app\src\main\AndroidManifest.xml
+		INJECTED from E:\as_my_project\MySdkSampleJM\app\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from E:\as_my_project\MySdkSampleJM\app\src\main\AndroidManifest.xml:2:11-69
+	android:versionCode
+		INJECTED from E:\as_my_project\MySdkSampleJM\app\src\main\AndroidManifest.xml
+		INJECTED from E:\as_my_project\MySdkSampleJM\app\src\main\AndroidManifest.xml
+application
+ADDED from E:\as_my_project\MySdkSampleJM\app\src\main\AndroidManifest.xml:5:5-62:19
+MERGED from [com.android.support:appcompat-v7:25.2.0] E:\as_my_project\MySdkSampleJM\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.2.0\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-v4:25.2.0] E:\as_my_project\MySdkSampleJM\app\build\intermediates\exploded-aar\com.android.support\support-v4\25.2.0\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-compat:25.2.0] E:\as_my_project\MySdkSampleJM\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.2.0\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-media-compat:25.2.0] E:\as_my_project\MySdkSampleJM\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.2.0\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-utils:25.2.0] E:\as_my_project\MySdkSampleJM\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.2.0\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-ui:25.2.0] E:\as_my_project\MySdkSampleJM\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.2.0\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-fragment:25.2.0] E:\as_my_project\MySdkSampleJM\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.2.0\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-vector-drawable:25.2.0] E:\as_my_project\MySdkSampleJM\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\25.2.0\AndroidManifest.xml:23:5-20
+MERGED from [com.android.support:animated-vector-drawable:25.2.0] E:\as_my_project\MySdkSampleJM\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\25.2.0\AndroidManifest.xml:22:5-20
+MERGED from [com.tbruyelle.rxpermissions2:rxpermissions:0.9.4] E:\as_my_project\MySdkSampleJM\app\build\intermediates\exploded-aar\com.tbruyelle.rxpermissions2\rxpermissions\0.9.4\AndroidManifest.xml:11:5-20
+MERGED from [:iot-release:] E:\as_my_project\MySdkSampleJM\app\build\intermediates\exploded-aar\iot-release\AndroidManifest.xml:16:5-18:19
+MERGED from [:asr-release:] E:\as_my_project\MySdkSampleJM\app\build\intermediates\exploded-aar\asr-release\AndroidManifest.xml:16:5-20:19
+MERGED from [:music-release:] E:\as_my_project\MySdkSampleJM\app\build\intermediates\exploded-aar\music-release\AndroidManifest.xml:21:5-28:19
+MERGED from [:semantic-release:] E:\as_my_project\MySdkSampleJM\app\build\intermediates\exploded-aar\semantic-release\AndroidManifest.xml:13:5-17:19
+MERGED from [:tts-release:] E:\as_my_project\MySdkSampleJM\app\build\intermediates\exploded-aar\tts-release\AndroidManifest.xml:17:5-20
+MERGED from [:turingmusic_mg:] E:\as_my_project\MySdkSampleJM\app\build\intermediates\exploded-aar\turingmusic_mg\AndroidManifest.xml:13:5-17:19
+MERGED from [:sdkhttp:] E:\as_my_project\MySdkSampleJM\app\build\intermediates\exploded-aar\sdkhttp\AndroidManifest.xml:11:5-15:19
+MERGED from [:common-release:] E:\as_my_project\MySdkSampleJM\app\build\intermediates\exploded-aar\common-release\AndroidManifest.xml:11:5-14:38
+	android:label
+		ADDED from E:\as_my_project\MySdkSampleJM\app\src\main\AndroidManifest.xml:9:9-41
+	android:supportsRtl
+		ADDED from E:\as_my_project\MySdkSampleJM\app\src\main\AndroidManifest.xml:10:9-35
+	android:allowBackup
+		ADDED from E:\as_my_project\MySdkSampleJM\app\src\main\AndroidManifest.xml:7:9-35
+	android:icon
+		ADDED from E:\as_my_project\MySdkSampleJM\app\src\main\AndroidManifest.xml:8:9-43
+	android:theme
+		ADDED from E:\as_my_project\MySdkSampleJM\app\src\main\AndroidManifest.xml:11:9-40
+	android:name
+		ADDED from E:\as_my_project\MySdkSampleJM\app\src\main\AndroidManifest.xml:6:9-37
+activity#com.turing.turingsdksample.activity_jm2.JM2Activity
+ADDED from E:\as_my_project\MySdkSampleJM\app\src\main\AndroidManifest.xml:28:9-40:20
+	android:screenOrientation
+		ADDED from E:\as_my_project\MySdkSampleJM\app\src\main\AndroidManifest.xml:32:13-50
+	android:launchMode
+		ADDED from E:\as_my_project\MySdkSampleJM\app\src\main\AndroidManifest.xml:31:13-44
+	android:configChanges
+		ADDED from E:\as_my_project\MySdkSampleJM\app\src\main\AndroidManifest.xml:30:13-83
+	android:name
+		ADDED from E:\as_my_project\MySdkSampleJM\app\src\main\AndroidManifest.xml:29:13-53
+intent-filter#android.intent.action.MAIN+android.intent.category.DEFAULT+android.intent.category.HOME+android.intent.category.LAUNCHER
+ADDED from E:\as_my_project\MySdkSampleJM\app\src\main\AndroidManifest.xml:33:13-39:29
+action#android.intent.action.MAIN
+ADDED from E:\as_my_project\MySdkSampleJM\app\src\main\AndroidManifest.xml:34:17-69
+	android:name
+		ADDED from E:\as_my_project\MySdkSampleJM\app\src\main\AndroidManifest.xml:34:25-66
+category#android.intent.category.LAUNCHER
+ADDED from E:\as_my_project\MySdkSampleJM\app\src\main\AndroidManifest.xml:35:17-77
+	android:name
+		ADDED from E:\as_my_project\MySdkSampleJM\app\src\main\AndroidManifest.xml:35:27-74
+category#android.intent.category.HOME
+ADDED from E:\as_my_project\MySdkSampleJM\app\src\main\AndroidManifest.xml:36:17-73
+	android:name
+		ADDED from E:\as_my_project\MySdkSampleJM\app\src\main\AndroidManifest.xml:36:27-70
+category#android.intent.category.DEFAULT
+ADDED from E:\as_my_project\MySdkSampleJM\app\src\main\AndroidManifest.xml:37:17-76
+	android:name
+		ADDED from E:\as_my_project\MySdkSampleJM\app\src\main\AndroidManifest.xml:37:27-73
+activity#com.turing.turingsdksample.activity.MainFragmentActivity
+ADDED from E:\as_my_project\MySdkSampleJM\app\src\main\AndroidManifest.xml:42:9-47:20
+	android:screenOrientation
+		ADDED from E:\as_my_project\MySdkSampleJM\app\src\main\AndroidManifest.xml:44:13-49
+	android:windowSoftInputMode
+		ADDED from E:\as_my_project\MySdkSampleJM\app\src\main\AndroidManifest.xml:45:13-52
+	android:name
+		ADDED from E:\as_my_project\MySdkSampleJM\app\src\main\AndroidManifest.xml:43:13-84
+activity#com.turing.turingsdksample.activity.LoginActivity
+ADDED from E:\as_my_project\MySdkSampleJM\app\src\main\AndroidManifest.xml:48:9-53:20
+	android:screenOrientation
+		ADDED from E:\as_my_project\MySdkSampleJM\app\src\main\AndroidManifest.xml:50:13-49
+	android:windowSoftInputMode
+		ADDED from E:\as_my_project\MySdkSampleJM\app\src\main\AndroidManifest.xml:51:13-52
+	android:name
+		ADDED from E:\as_my_project\MySdkSampleJM\app\src\main\AndroidManifest.xml:49:13-77
+meta-data#TURING_APPKEY
+ADDED from E:\as_my_project\MySdkSampleJM\app\src\main\AndroidManifest.xml:55:9-57:53
+	android:value
+		ADDED from E:\as_my_project\MySdkSampleJM\app\src\main\AndroidManifest.xml:57:13-50
+	android:name
+		ADDED from E:\as_my_project\MySdkSampleJM\app\src\main\AndroidManifest.xml:56:13-41
+meta-data#TURING_SECRET
+ADDED from E:\as_my_project\MySdkSampleJM\app\src\main\AndroidManifest.xml:58:9-60:53
+	android:value
+		ADDED from E:\as_my_project\MySdkSampleJM\app\src\main\AndroidManifest.xml:60:13-50
+	android:name
+		ADDED from E:\as_my_project\MySdkSampleJM\app\src\main\AndroidManifest.xml:59:13-41
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from E:\as_my_project\MySdkSampleJM\app\src\main\AndroidManifest.xml:64:5-81
+MERGED from [:authority-release:] E:\as_my_project\MySdkSampleJM\app\build\intermediates\exploded-aar\authority-release\AndroidManifest.xml:15:5-81
+MERGED from [:music-release:] E:\as_my_project\MySdkSampleJM\app\build\intermediates\exploded-aar\music-release\AndroidManifest.xml:16:5-81
+MERGED from [:tts-release:] E:\as_my_project\MySdkSampleJM\app\build\intermediates\exploded-aar\tts-release\AndroidManifest.xml:9:5-81
+	android:name
+		ADDED from E:\as_my_project\MySdkSampleJM\app\src\main\AndroidManifest.xml:64:22-78
+uses-permission#android.permission.RECORD_AUDIO
+ADDED from E:\as_my_project\MySdkSampleJM\app\src\main\AndroidManifest.xml:65:5-71
+MERGED from [:asr-release:] E:\as_my_project\MySdkSampleJM\app\build\intermediates\exploded-aar\asr-release\AndroidManifest.xml:13:5-71
+MERGED from [:tts-release:] E:\as_my_project\MySdkSampleJM\app\build\intermediates\exploded-aar\tts-release\AndroidManifest.xml:10:5-71
+	android:name
+		ADDED from E:\as_my_project\MySdkSampleJM\app\src\main\AndroidManifest.xml:65:22-68
+uses-permission#android.permission.INTERNET
+ADDED from E:\as_my_project\MySdkSampleJM\app\src\main\AndroidManifest.xml:66:5-67
+MERGED from [:iot-release:] E:\as_my_project\MySdkSampleJM\app\build\intermediates\exploded-aar\iot-release\AndroidManifest.xml:12:5-67
+MERGED from [:asr-release:] E:\as_my_project\MySdkSampleJM\app\build\intermediates\exploded-aar\asr-release\AndroidManifest.xml:12:5-67
+MERGED from [:authority-release:] E:\as_my_project\MySdkSampleJM\app\build\intermediates\exploded-aar\authority-release\AndroidManifest.xml:12:5-67
+MERGED from [:music-release:] E:\as_my_project\MySdkSampleJM\app\build\intermediates\exploded-aar\music-release\AndroidManifest.xml:14:5-67
+MERGED from [:semantic-release:] E:\as_my_project\MySdkSampleJM\app\build\intermediates\exploded-aar\semantic-release\AndroidManifest.xml:11:5-67
+MERGED from [:tts-release:] E:\as_my_project\MySdkSampleJM\app\build\intermediates\exploded-aar\tts-release\AndroidManifest.xml:11:5-67
+	android:name
+		ADDED from E:\as_my_project\MySdkSampleJM\app\src\main\AndroidManifest.xml:66:22-64
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from E:\as_my_project\MySdkSampleJM\app\src\main\AndroidManifest.xml:67:5-79
+MERGED from [:iot-release:] E:\as_my_project\MySdkSampleJM\app\build\intermediates\exploded-aar\iot-release\AndroidManifest.xml:13:5-79
+MERGED from [:authority-release:] E:\as_my_project\MySdkSampleJM\app\build\intermediates\exploded-aar\authority-release\AndroidManifest.xml:13:5-79
+MERGED from [:music-release:] E:\as_my_project\MySdkSampleJM\app\build\intermediates\exploded-aar\music-release\AndroidManifest.xml:11:5-79
+MERGED from [:tts-release:] E:\as_my_project\MySdkSampleJM\app\build\intermediates\exploded-aar\tts-release\AndroidManifest.xml:12:5-79
+	android:name
+		ADDED from E:\as_my_project\MySdkSampleJM\app\src\main\AndroidManifest.xml:67:22-76
+uses-permission#android.permission.ACCESS_WIFI_STATE
+ADDED from E:\as_my_project\MySdkSampleJM\app\src\main\AndroidManifest.xml:68:5-76
+MERGED from [:asr-release:] E:\as_my_project\MySdkSampleJM\app\build\intermediates\exploded-aar\asr-release\AndroidManifest.xml:14:5-76
+MERGED from [:authority-release:] E:\as_my_project\MySdkSampleJM\app\build\intermediates\exploded-aar\authority-release\AndroidManifest.xml:11:5-76
+MERGED from [:music-release:] E:\as_my_project\MySdkSampleJM\app\build\intermediates\exploded-aar\music-release\AndroidManifest.xml:12:5-76
+MERGED from [:tts-release:] E:\as_my_project\MySdkSampleJM\app\build\intermediates\exploded-aar\tts-release\AndroidManifest.xml:13:5-76
+MERGED from [:turingmusic_mg:] E:\as_my_project\MySdkSampleJM\app\build\intermediates\exploded-aar\turingmusic_mg\AndroidManifest.xml:11:5-76
+	android:name
+		ADDED from E:\as_my_project\MySdkSampleJM\app\src\main\AndroidManifest.xml:68:22-73
+uses-permission#android.permission.CHANGE_WIFI_STATE
+ADDED from E:\as_my_project\MySdkSampleJM\app\src\main\AndroidManifest.xml:69:5-76
+MERGED from [:music-release:] E:\as_my_project\MySdkSampleJM\app\build\intermediates\exploded-aar\music-release\AndroidManifest.xml:13:5-76
+	android:name
+		ADDED from E:\as_my_project\MySdkSampleJM\app\src\main\AndroidManifest.xml:69:22-73
+uses-permission#android.permission.READ_PHONE_STATE
+ADDED from E:\as_my_project\MySdkSampleJM\app\src\main\AndroidManifest.xml:70:5-75
+MERGED from [:asr-release:] E:\as_my_project\MySdkSampleJM\app\build\intermediates\exploded-aar\asr-release\AndroidManifest.xml:11:5-75
+MERGED from [:authority-release:] E:\as_my_project\MySdkSampleJM\app\build\intermediates\exploded-aar\authority-release\AndroidManifest.xml:14:5-75
+MERGED from [:music-release:] E:\as_my_project\MySdkSampleJM\app\build\intermediates\exploded-aar\music-release\AndroidManifest.xml:18:5-75
+MERGED from [:tts-release:] E:\as_my_project\MySdkSampleJM\app\build\intermediates\exploded-aar\tts-release\AndroidManifest.xml:15:5-75
+	android:name
+		ADDED from E:\as_my_project\MySdkSampleJM\app\src\main\AndroidManifest.xml:70:22-72
+uses-permission#android.permission.CALL_PHONE
+ADDED from E:\as_my_project\MySdkSampleJM\app\src\main\AndroidManifest.xml:71:5-69
+	android:name
+		ADDED from E:\as_my_project\MySdkSampleJM\app\src\main\AndroidManifest.xml:71:22-66
+uses-permission#android.permission.MODIFY_PHONE_STATE
+ADDED from E:\as_my_project\MySdkSampleJM\app\src\main\AndroidManifest.xml:72:5-77
+	android:name
+		ADDED from E:\as_my_project\MySdkSampleJM\app\src\main\AndroidManifest.xml:72:22-74
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from E:\as_my_project\MySdkSampleJM\app\src\main\AndroidManifest.xml:73:5-80
+MERGED from [:music-release:] E:\as_my_project\MySdkSampleJM\app\build\intermediates\exploded-aar\music-release\AndroidManifest.xml:17:5-80
+	android:name
+		ADDED from E:\as_my_project\MySdkSampleJM\app\src\main\AndroidManifest.xml:73:22-77
+uses-permission#android.permission.WRITE_SETTINGS
+ADDED from E:\as_my_project\MySdkSampleJM\app\src\main\AndroidManifest.xml:74:5-73
+	android:name
+		ADDED from E:\as_my_project\MySdkSampleJM\app\src\main\AndroidManifest.xml:74:22-70
+uses-permission#android.permission.MODIFY_AUDIO_SETTINGS
+ADDED from E:\as_my_project\MySdkSampleJM\app\src\main\AndroidManifest.xml:75:5-80
+	android:name
+		ADDED from E:\as_my_project\MySdkSampleJM\app\src\main\AndroidManifest.xml:75:22-77
+uses-permission#android.permission.RECEIVE_BOOT_COMPLETED
+ADDED from E:\as_my_project\MySdkSampleJM\app\src\main\AndroidManifest.xml:76:5-81
+	android:name
+		ADDED from E:\as_my_project\MySdkSampleJM\app\src\main\AndroidManifest.xml:76:22-78
+uses-permission#android.permission.DISABLE_KEYGUARD
+ADDED from E:\as_my_project\MySdkSampleJM\app\src\main\AndroidManifest.xml:77:5-75
+	android:name
+		ADDED from E:\as_my_project\MySdkSampleJM\app\src\main\AndroidManifest.xml:77:22-72
+uses-permission#android.permission.WAKE_LOCK
+ADDED from E:\as_my_project\MySdkSampleJM\app\src\main\AndroidManifest.xml:78:5-68
+MERGED from [:iot-release:] E:\as_my_project\MySdkSampleJM\app\build\intermediates\exploded-aar\iot-release\AndroidManifest.xml:14:5-68
+MERGED from [:music-release:] E:\as_my_project\MySdkSampleJM\app\build\intermediates\exploded-aar\music-release\AndroidManifest.xml:19:5-68
+	android:name
+		ADDED from E:\as_my_project\MySdkSampleJM\app\src\main\AndroidManifest.xml:78:22-65
+uses-sdk
+INJECTED from E:\as_my_project\MySdkSampleJM\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [com.android.support:appcompat-v7:25.2.0] E:\as_my_project\MySdkSampleJM\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.2.0\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:support-v4:25.2.0] E:\as_my_project\MySdkSampleJM\app\build\intermediates\exploded-aar\com.android.support\support-v4\25.2.0\AndroidManifest.xml:21:5-23:54
+MERGED from [com.android.support:support-compat:25.2.0] E:\as_my_project\MySdkSampleJM\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.2.0\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-media-compat:25.2.0] E:\as_my_project\MySdkSampleJM\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.2.0\AndroidManifest.xml:21:5-23:63
+MERGED from [com.android.support:support-core-utils:25.2.0] E:\as_my_project\MySdkSampleJM\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\25.2.0\AndroidManifest.xml:21:5-23:61
+MERGED from [com.android.support:support-core-ui:25.2.0] E:\as_my_project\MySdkSampleJM\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.2.0\AndroidManifest.xml:21:5-23:58
+MERGED from [com.android.support:support-fragment:25.2.0] E:\as_my_project\MySdkSampleJM\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.2.0\AndroidManifest.xml:21:5-23:60
+MERGED from [com.android.support:support-vector-drawable:25.2.0] E:\as_my_project\MySdkSampleJM\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\25.2.0\AndroidManifest.xml:21:5-43
+MERGED from [com.android.support:animated-vector-drawable:25.2.0] E:\as_my_project\MySdkSampleJM\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\25.2.0\AndroidManifest.xml:20:5-44
+MERGED from [io.reactivex.rxjava2:rxandroid:2.0.1] E:\as_my_project\MySdkSampleJM\app\build\intermediates\exploded-aar\io.reactivex.rxjava2\rxandroid\2.0.1\AndroidManifest.xml:19:5-43
+MERGED from [com.tbruyelle.rxpermissions2:rxpermissions:0.9.4] E:\as_my_project\MySdkSampleJM\app\build\intermediates\exploded-aar\com.tbruyelle.rxpermissions2\rxpermissions\0.9.4\AndroidManifest.xml:7:5-9:41
+MERGED from [:iot-release:] E:\as_my_project\MySdkSampleJM\app\build\intermediates\exploded-aar\iot-release\AndroidManifest.xml:7:5-9:41
+MERGED from [:asr-release:] E:\as_my_project\MySdkSampleJM\app\build\intermediates\exploded-aar\asr-release\AndroidManifest.xml:7:5-9:41
+MERGED from [:authority-release:] E:\as_my_project\MySdkSampleJM\app\build\intermediates\exploded-aar\authority-release\AndroidManifest.xml:7:5-9:41
+MERGED from [:music-release:] E:\as_my_project\MySdkSampleJM\app\build\intermediates\exploded-aar\music-release\AndroidManifest.xml:7:5-9:41
+MERGED from [:semantic-release:] E:\as_my_project\MySdkSampleJM\app\build\intermediates\exploded-aar\semantic-release\AndroidManifest.xml:7:5-9:41
+MERGED from [:tts-release:] E:\as_my_project\MySdkSampleJM\app\build\intermediates\exploded-aar\tts-release\AndroidManifest.xml:7:5-44
+MERGED from [:turingmusic_mg:] E:\as_my_project\MySdkSampleJM\app\build\intermediates\exploded-aar\turingmusic_mg\AndroidManifest.xml:7:5-9:41
+MERGED from [:sdkhttp:] E:\as_my_project\MySdkSampleJM\app\build\intermediates\exploded-aar\sdkhttp\AndroidManifest.xml:7:5-9:41
+MERGED from [:common-release:] E:\as_my_project\MySdkSampleJM\app\build\intermediates\exploded-aar\common-release\AndroidManifest.xml:7:5-9:41
+MERGED from [com.zhy:okhttputils:2.6.2] E:\as_my_project\MySdkSampleJM\app\build\intermediates\exploded-aar\com.zhy\okhttputils\2.6.2\AndroidManifest.xml:7:5-9:41
+MERGED from [net.zetetic:android-database-sqlcipher:3.5.4] E:\as_my_project\MySdkSampleJM\app\build\intermediates\exploded-aar\net.zetetic\android-database-sqlcipher\3.5.4\AndroidManifest.xml:3:3-40
+MERGED from [pl.droidsonroids.gif:android-gif-drawable:1.2.4] E:\as_my_project\MySdkSampleJM\app\build\intermediates\exploded-aar\pl.droidsonroids.gif\android-gif-drawable\1.2.4\AndroidManifest.xml:7:5-9:41
+	tools:overrideLibrary
+		ADDED from [com.android.support:appcompat-v7:25.2.0] E:\as_my_project\MySdkSampleJM\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.2.0\AndroidManifest.xml:23:9-75
+	android:targetSdkVersion
+		INJECTED from E:\as_my_project\MySdkSampleJM\app\src\main\AndroidManifest.xml
+		INJECTED from E:\as_my_project\MySdkSampleJM\app\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from E:\as_my_project\MySdkSampleJM\app\src\main\AndroidManifest.xml
+		INJECTED from E:\as_my_project\MySdkSampleJM\app\src\main\AndroidManifest.xml
+uses-permission#android.permission.CHANGE_WIFI_MULTICAST_STATE
+ADDED from [:iot-release:] E:\as_my_project\MySdkSampleJM\app\build\intermediates\exploded-aar\iot-release\AndroidManifest.xml:11:5-86
+	android:name
+		ADDED from [:iot-release:] E:\as_my_project\MySdkSampleJM\app\build\intermediates\exploded-aar\iot-release\AndroidManifest.xml:11:22-83
+service#org.eclipse.paho.android.service.MqttService
+ADDED from [:iot-release:] E:\as_my_project\MySdkSampleJM\app\build\intermediates\exploded-aar\iot-release\AndroidManifest.xml:17:9-80
+	android:name
+		ADDED from [:iot-release:] E:\as_my_project\MySdkSampleJM\app\build\intermediates\exploded-aar\iot-release\AndroidManifest.xml:17:18-77
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from [:authority-release:] E:\as_my_project\MySdkSampleJM\app\build\intermediates\exploded-aar\authority-release\AndroidManifest.xml:16:5-81
+	android:name
+		ADDED from [:authority-release:] E:\as_my_project\MySdkSampleJM\app\build\intermediates\exploded-aar\authority-release\AndroidManifest.xml:16:22-78
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from [:authority-release:] E:\as_my_project\MySdkSampleJM\app\build\intermediates\exploded-aar\authority-release\AndroidManifest.xml:17:5-79
+	android:name
+		ADDED from [:authority-release:] E:\as_my_project\MySdkSampleJM\app\build\intermediates\exploded-aar\authority-release\AndroidManifest.xml:17:22-76
+service#com.sitech.migurun.service.AudioPlayService
+ADDED from [:music-release:] E:\as_my_project\MySdkSampleJM\app\build\intermediates\exploded-aar\music-release\AndroidManifest.xml:25:9-27:40
+	android:exported
+		ADDED from [:music-release:] E:\as_my_project\MySdkSampleJM\app\build\intermediates\exploded-aar\music-release\AndroidManifest.xml:27:13-37
+	android:name
+		ADDED from [:music-release:] E:\as_my_project\MySdkSampleJM\app\build\intermediates\exploded-aar\music-release\AndroidManifest.xml:26:13-71
+uses-permission#android.permission.CHANGE_NETWORK_STATE
+ADDED from [:tts-release:] E:\as_my_project\MySdkSampleJM\app\build\intermediates\exploded-aar\tts-release\AndroidManifest.xml:14:5-79
+	android:name
+		ADDED from [:tts-release:] E:\as_my_project\MySdkSampleJM\app\build\intermediates\exploded-aar\tts-release\AndroidManifest.xml:14:22-76
