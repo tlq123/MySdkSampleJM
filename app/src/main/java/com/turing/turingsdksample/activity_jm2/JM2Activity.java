@@ -6,7 +6,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.net.ConnectivityManager;
-import android.net.wifi.WifiManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -29,6 +28,9 @@ import com.turing.tts.TTSInitListener;
 import com.turing.tts.TTSListener;
 import com.turing.tts.TTSManager;
 import com.turing.turingsdksample.R;
+import com.turing.turingsdksample.alarm.Alarm;
+import com.turing.turingsdksample.alarm.AlarmManagerUtil;
+import com.turing.turingsdksample.alarm.Database;
 import com.turing.turingsdksample.bean.QASREntity;
 import com.turing.turingsdksample.constants.ConstantsUtil;
 import com.turing.turingsdksample.constants.FunctionConstants;
@@ -42,12 +44,19 @@ import com.turing.turingsdksample.util.CopyResUtil;
 import com.turing.turingsdksample.util.Logger;
 import com.turing.turingsdksample.util.MyNetUtil;
 import com.turing.turingsdksample.util.OSDataTransformUtil;
+import com.turing.turingsdksample.util.ThreadPoolManager;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.UnsupportedEncodingException;
+import java.net.NetworkInterface;
 import java.net.URLDecoder;
+import java.nio.ByteBuffer;
+import java.nio.channels.FileChannel;
+import java.util.Collections;
 import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
@@ -68,7 +77,9 @@ public class JM2Activity extends Activity implements MQTTReceiveInterface {
     private boolean isWakeUpExit = true;  //判断是唤醒退出、返回键退出；或者是点播退出
     private boolean isRecorder = false ;  //判断是否正在录音
     private boolean isMusic = false ;     //判断是否正在唱歌或者讲故事
-
+    private boolean isQSessionError = false ;  //奇梦返回的错误标识
+    public static   boolean isAPFlag ;  // ap配网，进入后，屏蔽些提示
+    public static final String ALARM_SHOW = "com.alarm.clock.show";
     /**
      * 当前返回的语义解析结果
      */
@@ -139,17 +150,35 @@ public class JM2Activity extends Activity implements MQTTReceiveInterface {
 
     private void init(){
 
-                /*com.turing123.libs.android.utils.Logger.setLogOn(false);
-        LogUtil.setDebugLogOn(false);
-        com.turing.music.LogUtil.setDebugLogOn(false);
-        com.util.LogUtil.setDebugLogOn(false);
-        com.qdreamer.utils.Loger.isDebug = false ;*/
 
+        isAPFlag = false ;
+        isQSessionError = false ;
         mContext = this ;
         isFirstInit = true ;
         isRecorder = false ;
         mPath = getApplicationContext().getFilesDir().getAbsolutePath() + "/";
-        mResBfio = "role=bfio;cfg=" + mPath + "qvoice/bfio1.xzxz.0713.bin;use_oneMic=0;";
+        mResBfio = "role=bfio;cfg=" + mPath + "qvoice/bfio1.xzxz.20190112.bin;use_oneMic=0;";
+        // 识别引擎消息处理handler
+        asrHandler = new Handler() {
+            @Override
+            public void handleMessage(Message msg) {
+                switch (msg.what) {
+                    case QEngine.QENGINE_ASR_DATA:// 识别结果回调
+                        if (msg.obj != null) {
+                            byte[] data1 = (byte[]) msg.obj;
+                            String result = new String(data1);
+                            setAsrFlag(false);
+                            processAsr(result);
+                        }
+                        break;
+                    default:
+                        break;
+                }
+                super.handleMessage(msg);
+            }
+        };
+
+
 
         //音频初始化以及播放状态
         MediaMusicUtil.getInstance().initMusic(this, new MediaMusicUtil.ImusicListener() {
@@ -157,21 +186,31 @@ public class JM2Activity extends Activity implements MQTTReceiveInterface {
             public void OnMusicCompletion() {
                 Logger.d(TAG,"OnMusicCompletion。。。isAsrFlag："+isAsrFlag+ "  mediaType:"+mediaType);
                 isMusic = false ;
-                if(!MyNetUtil.isNetworkAvailable(mContext)){
-                    MediaMusicUtil.getInstance().startPlayMediaRes(R.raw.net_off_hint);
-                    return ;
+                if(isAPFlag){
+                    Logger.d(TAG,"OnMusicCompletion。。。配网中。。。。");
+                    return;
                 }
-                if( 1 == mediaType ){
-                    startMusic( lastUrl , 2 );
-                }else if( 2 == mediaType ){
-                    curPosition = 0;
-                    //播完接着请求播下一首
-                    MQTTBindManager.httpChangeSong("next", mContext);
-                }else if( 3 == mediaType ){
-                    if( !isAsrFlag ){
-                        JM2Base.getInstance().doPost("下一个");
+
+                ThreadPoolManager.getInstance().execute(new Runnable() {
+                    @Override
+                    public void run() {
+                        if( MyNetUtil.isNetworkAvailable(mContext) ){
+                            if( 1 == mediaType ){
+                                startMusic( lastUrl , 2 );
+                            }else if( 2 == mediaType ){
+                                curPosition = 0;
+                                //播完接着请求播下一首
+                                MQTTBindManager.httpChangeSong("next", mContext);
+                            }else if( 3 == mediaType ){
+                                if( !isAsrFlag ){
+                                    JM2Base.getInstance().doPost("下一个");
+                                }
+                            }
+                        }else {
+                            MediaMusicUtil.getInstance().startPlayMediaRes(R.raw.net_off_hint);
+                        }
                     }
-                }
+                });
             }
 
             @Override
@@ -203,17 +242,65 @@ public class JM2Activity extends Activity implements MQTTReceiveInterface {
         MediaMusicUtil.getInstance().startPlayMediaRes(R.raw.happy_see_you);
 
         ConfigureNetworkUtil.toggleWiFi(this);  //开启wifi
-        ConfigureNetworkUtil.playConnNetPromote(this); //网络提示语
+
         regBroadcast();//wifi 电量 广播
 
         CopyResUtil.copyRes(mContext,mPath);
 
-        if( MyNetUtil.isNetworkAvailable(this) ){
-            initTuing();
+        ConfigureNetworkUtil.playConnNetPromote(this); //网络提示语
+        ThreadPoolManager.getInstance().execute(new Runnable() {
+            @Override
+            public void run() {
+                if( MyNetUtil.isNetworkAvailable(mContext) ){
+                    initTuing();
+                }
+            }
+        });
+
+        ThreadPoolManager.getInstance().execute(new Runnable() {
+            @Override
+            public void run() {
+                initDatabase();
+            }
+        });
+    }
+    /*
+    初始化闹钟
+     */
+    private void initDatabase(){
+        Database.init(mContext);  //初始化闹钟的数据库
+        List<Alarm> list = Database.getAll();
+        for(Alarm alarm : list){
+            String times[] = alarm.getAlarmTimeString().split(":");
+            Logger.e(TAG,"闹钟ID："+alarm.getId()+"  时间："+alarm.getAlarmTimeString());
+            AlarmManagerUtil.setAlarm(mContext, 1, Integer.parseInt(times[0]), Integer.parseInt
+                    (times[1]), alarm.getId(), 0, "闹钟响了", 1);
         }
     }
 
-
+    public  String getMacAddr() {
+        try {
+            List<NetworkInterface> all = Collections.list(NetworkInterface.getNetworkInterfaces());
+            for (NetworkInterface nif : all) {
+                if (!nif.getName().equalsIgnoreCase("wlan0")) continue;
+                byte[] macBytes = nif.getHardwareAddress();
+                if (macBytes == null) {
+                    return "";
+                }
+                StringBuilder res1 = new StringBuilder();
+                for (byte b : macBytes) {
+                    res1.append(String.format("%02X:",b));
+                }
+                if (res1.length() > 0) {
+                    res1.deleteCharAt(res1.length() - 1);
+                }
+                return res1.toString();
+            }
+        } catch (Exception ex) {
+            Logger.e(TAG,"e:"+ ex.getMessage());
+        }
+        return "00:00:00:00:00:00";
+    }
 
     /*
     图灵
@@ -226,9 +313,9 @@ public class JM2Activity extends Activity implements MQTTReceiveInterface {
             MQTTBindManager.init(mContext);
             return ;
         }
-
-        String macAdd = ((WifiManager) mContext.getSystemService(Context.WIFI_SERVICE)).getConnectionInfo().getMacAddress();
-        Logger.i(TAG, "macAdd:" + macAdd);
+//        String macAdd = ((WifiManager) mContext.getSystemService(Context.WIFI_SERVICE)).getConnectionInfo().getMacAddress();
+        String macAdd = getMacAddr();
+        Logger.e(TAG, "macAdd:" + macAdd);
         if (macAdd != null && macAdd.startsWith("00:")) {
             MediaMusicUtil.getInstance().startPlayMediaRes(R.raw.write_mac_first);
             return;
@@ -240,7 +327,6 @@ public class JM2Activity extends Activity implements MQTTReceiveInterface {
                 SdkInitializer.init(mContext,  ConstantsUtil.API_KEY, ConstantsUtil.API_SECRET, authenticationListener);
             }
         }
-
     }
     /*
     图灵 初始化的监听
@@ -262,7 +348,7 @@ public class JM2Activity extends Activity implements MQTTReceiveInterface {
                                 Logger.e(TAG, "TTS init success");
                                 JM2Base.getInstance().getAll(httpClientListener,itsCallback,mContext);
                                 initQM();
-                                //点播
+//                                点播
                                 MQTTBindManager.setOnMQTTReceiveListener(JM2Activity.this);
                                 MQTTBindManager.bindDevice(mContext);
                                 MQTTBindManager.init(mContext);
@@ -274,6 +360,7 @@ public class JM2Activity extends Activity implements MQTTReceiveInterface {
                                 Logger.e(TAG, "TTS init failed errorCode=" + i + "   errorMsg=" + s);
                             }
                         });
+
                     }
 
                 }
@@ -285,9 +372,6 @@ public class JM2Activity extends Activity implements MQTTReceiveInterface {
             MediaMusicUtil.getInstance().startPlayMediaRes(R.raw.initsdk_fail);
         }
     };
-
-
-
 
     // 奇梦语音识别 处理识别结果
     private void processAsr(String content) {
@@ -305,32 +389,13 @@ public class JM2Activity extends Activity implements MQTTReceiveInterface {
         }catch (Exception e){
             Log.d(TAG, "识别结果 出错了 "+e.getMessage() );
         }
-
     }
 
     /*
    奇梦
     */
     private void initQM(){
-        // 识别引擎消息处理handler
-        asrHandler = new Handler() {
-            @Override
-            public void handleMessage(Message msg) {
-                switch (msg.what) {
-                    case QEngine.QENGINE_ASR_DATA:// 识别结果回调
-                        if (msg.obj != null) {
-                            byte[] data1 = (byte[]) msg.obj;
-                            String result = new String(data1);
-                            setAsrFlag(false);
-                            processAsr(result);
-                        }
-                        break;
-                    default:
-                        break;
-                }
-                super.handleMessage(msg);
-            }
-        };
+
 
         qSession = new QSession(getApplicationContext());
         asrEngine = new QEngine();
@@ -345,8 +410,22 @@ public class JM2Activity extends Activity implements MQTTReceiveInterface {
             @Override
             public void errorCode(String errorCode) {
 
-                Logger.d(TAG, "error coed:" + errorCode);
+                Logger.d(TAG, "error coed:" + errorCode+ "  isQSessionError:"+isQSessionError+"  isMusic:"+isMusic);
 
+                if(isQSessionError){
+                    return ;
+                }
+                if( isMusic || isAPFlag){
+                    isQSessionError = true ;
+                    return ;
+                }
+                isQSessionError = true ;
+                MediaMusicUtil.getInstance().startPlayMediaRes(R.raw.qm_net_error);
+                if(errorCode.contains("11204")) {
+                    bfio.stop();
+                    boolean flag = bfio.start(true);
+                    Logger.e(TAG,"11204 错误从启 flag ："+flag );
+                }
             }
         });
 
@@ -440,7 +519,7 @@ public class JM2Activity extends Activity implements MQTTReceiveInterface {
             if ("speakBegin".equals(ttsCallbackState)) {
                 MediaMusicUtil.getInstance().startPlayMediaRes(R.raw.speech_end_xiu);
                 setAsrFlag(true);
-
+//                AsrManager.getInstance().startAsr(asrListener);
              //休眠
             }else if("dormancy".equals(ttsCallbackState)){
                 close();
@@ -454,12 +533,35 @@ public class JM2Activity extends Activity implements MQTTReceiveInterface {
         }
     };
 
+
+    /*
+    保存录音文件
+     */
+    public  void writeBytesToFile(byte[] bs) {
+        try {
+            File file = new File("/sdcard/qmVoice.pcm");
+            if(!file.exists()){
+                file.createNewFile();
+            }
+            ByteBuffer bb = ByteBuffer.wrap(bs);
+//            FileChannel fc = new FileOutputStream(file).getChannel();
+            FileChannel fc = new FileOutputStream(file,true).getChannel(); //叠加的录音
+            fc.write(bb);
+            fc.close();
+            Logger.d(TAG, "录音中保存成功:"+file.getPath() );
+        } catch (Exception e) {
+            e.printStackTrace();
+            Logger.d(TAG, "录音中保存失败:"+e.getMessage() );
+        }
+
+    }
+
     // 奇梦 bfio回调
     BfioHelper.QdreamerBfioListener bfioListener = new BfioHelper.QdreamerBfioListener() {
 
         @Override
         public void getMicData(byte[] bytes) {
-
+//            writeBytesToFile(bytes);
         }
 
         @Override
@@ -471,8 +573,10 @@ public class JM2Activity extends Activity implements MQTTReceiveInterface {
             }
             Logger.d(TAG, "===wakeUP 成功唤醒" );
             isWakeUpExit = true ;
+
             exitLogic() ;
             checkRecordTimeout ();
+
         }
 
         @Override
@@ -533,13 +637,40 @@ public class JM2Activity extends Activity implements MQTTReceiveInterface {
     public void exitLogic() {
 
         isMusic = false ;
+        behavior = null ;
         if(!isFirstInit){
             TTSManager.getInstance().stopTTS();
         }
         MediaMusicUtil.getInstance().stopPlayMediaUrl();
         MediaMusicUtil.getInstance().startPlayMediaRes(R.raw.speech_end_xiu);
         setAsrFlag(true);
+        isQSessionError = false ;  //奇梦错误标识
         Logger.d(TAG, "exitLogic isAsrFlag："+isAsrFlag);
+    }
+
+    //打断退出 点播
+    public void exitLogic2() {
+
+        isMusic = false ;
+        behavior = null ;
+        if(!isFirstInit){
+            TTSManager.getInstance().stopTTS();
+        }
+        MediaMusicUtil.getInstance().stopPlayMediaUrl();
+        Logger.d(TAG, "exitLogic 2：");
+    }
+
+    //闹钟提示
+    public void alarmShow() {
+        isMusic = false ;
+        behavior = null ;
+        setAsrFlag(false);
+        if(!isFirstInit){
+            TTSManager.getInstance().stopTTS();
+        }
+        MediaMusicUtil.getInstance().stopPlayMediaUrl();
+        MediaMusicUtil.getInstance().startPlayMediaRes(R.raw.alarm_tts);
+        Logger.d(TAG, "闹钟提示开始 播放闹钟提示音");
     }
 
     /*
@@ -658,12 +789,15 @@ public class JM2Activity extends Activity implements MQTTReceiveInterface {
     private int mediaType = 0 ;  //0表示无类型  1表示点播新歌曲 2表示点播暂停播放  3表示奇梦搜索的歌曲
     private MqttInfo mMqttInfo ;
 
+    /*
+    处理点播音频
+     */
     private  void dealMusic(MqttInfo mqttInfo){
 
         if(mqttInfo == null ){
             return ;
         }
-        exitLogic();
+        exitLogic2();
         setAsrFlag(false);
         mMqttInfo = mqttInfo ;
 
@@ -685,6 +819,9 @@ public class JM2Activity extends Activity implements MQTTReceiveInterface {
         }
     }
 
+    /*
+    开始播放音频
+     */
     public void startMusic(String mediaUrl , int type) {
         Log.e(TAG, "media url=" + mediaUrl);
         isMusic = true ;
@@ -728,6 +865,7 @@ public class JM2Activity extends Activity implements MQTTReceiveInterface {
         IntentFilter filter = new IntentFilter();
         filter.addAction(Intent.ACTION_BATTERY_CHANGED);
         filter.addAction(ConnectivityManager.CONNECTIVITY_ACTION);
+        filter.addAction(AlarmManagerUtil.ALARM_ACTION);
         registerReceiver(mtouchReceiver, filter);
     }
 
@@ -740,22 +878,39 @@ public class JM2Activity extends Activity implements MQTTReceiveInterface {
             String action = intent.getAction();
             Logger.i(TAG,"CONNECTIVITY_ACTION action:"+action);
             if (ConnectivityManager.CONNECTIVITY_ACTION.equals(action)) {//网络变化
-                Logger.i(TAG, "CONNECTIVITY_ACTION  NetUtil.isNetworkAvailable(mcontext):" + MyNetUtil.isNetworkAvailable(mContext));
 
-                if (MyNetUtil.isNetworkAvailable(mContext)) {//有网络
-                    if(!isMusic){  //当播放歌曲时，不进行提示，播完后进行提示
-                        MediaMusicUtil.getInstance().startPlayMediaRes(R.raw.net_connected);
+                ThreadPoolManager.getInstance().execute(new Runnable() {
+                    @Override
+                    public void run() {
+                        boolean netFlag = MyNetUtil.isNetworkAvailable(mContext) ;
+                        Logger.i(TAG, "CONNECTIVITY_ACTION  NetUtil.isNetworkAvailable(mcontext):" +netFlag );
+                        if (netFlag) {//有网络
+                            isAPFlag = false ;
+                            if(!isMusic){  //当播放歌曲时，不进行提示，播完后进行提示
+                                MediaMusicUtil.getInstance().startPlayMediaRes(R.raw.net_connected);
+                            }
+                            initTuing();
+                        } else {//无网络
+                            if(!isMusic && !isAPFlag) {
+                                MediaMusicUtil.getInstance().startPlayMediaRes(R.raw.net_off_hint);
+                            }
+                        }
                     }
-                    initTuing();
-                } else {//无网络
-                    if(!isMusic) {
-                        MediaMusicUtil.getInstance().startPlayMediaRes(R.raw.net_off_hint);
-                    }
-                }
+                });
+
             }else if(Intent.ACTION_BATTERY_CHANGED.equals(action)){
                 int powerValue = intent.getIntExtra("level", 0);
                 JM2Base.getInstance().setPowerValue(powerValue);
                 Logger.d(TAG,"CONNECTIVITY_ACTION mPowerValue:"+powerValue);
+            }else if(AlarmManagerUtil.ALARM_ACTION.equals(action)){  //闹钟提示
+                long intervalMillis = intent.getLongExtra("intervalMillis", 0);
+                Logger.e(TAG,"intervalMillis:"+intervalMillis);
+                if (intervalMillis != 0) {
+
+                    AlarmManagerUtil.setAlarmTime(context, System.currentTimeMillis() + intervalMillis,
+                            intent);
+                }
+                alarmShow();
             }
         }
     };
@@ -776,6 +931,8 @@ public class JM2Activity extends Activity implements MQTTReceiveInterface {
             }
             if(System.currentTimeMillis()-downTime > 5*1000){  //进入配网
                 downTime = System.currentTimeMillis()  * 2 ; //只是让这个判断不重复进来
+                exitLogic2();
+                isAPFlag = true ;
                 ConfigureNetworkUtil.connNetAP(mContext);
             }
             return true;
@@ -816,10 +973,8 @@ public class JM2Activity extends Activity implements MQTTReceiveInterface {
         }
         if( keyCode == 10 || keyCode == 4){
             if( (System.currentTimeMillis()-downTime) < 4000  && (System.currentTimeMillis()-downTime)>0 ){
-                if(MyNetUtil.isNetworkAvailable(mContext)){
-                    isWakeUpExit = true ;
-                    exitLogic();
-                }
+                isWakeUpExit = true ;
+                exitLogic();
             }
         }
         return true ; //让其他按键无效

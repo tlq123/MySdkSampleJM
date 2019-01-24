@@ -85,6 +85,7 @@ public class IOTFragment extends BaseFragment implements View.OnClickListener {
 
                 break;
             case R.id.btn_mqtt_send:
+
                 break;
             case R.id.btn_mqtt_disconnect:
 

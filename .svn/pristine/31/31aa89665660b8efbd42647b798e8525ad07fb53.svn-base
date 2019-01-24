@@ -1,0 +1,227 @@
+package com.turing.turingsdksample.demo_common;
+
+import android.content.Context;
+import android.net.wifi.WifiConfiguration;
+import android.net.wifi.WifiManager;
+import android.os.Handler;
+import android.telephony.TelephonyManager;
+
+import com.alibaba.fastjson.JSON;
+import com.turing.turingsdksample.R;
+import com.turing.turingsdksample.constants.ConstantsUtil;
+import com.turing.turingsdksample.util.Logger;
+import com.turing.turingsdksample.util.MyNetUtil;
+import com.turing.turingsdksample.util.ThreadPoolManager;
+import com.turing123.libs.android.connectivity.ConnectionManager;
+import com.turing123.libs.android.connectivity.ConnectionStatus;
+import com.turing123.libs.android.connectivity.ConnectionStatusCallback;
+import com.turing123.libs.android.connectivity.DataReceiveCallback;
+import com.turing123.libs.android.connectivity.wifi.ap.ApConfiguration;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.util.ArrayList;
+
+/*
+网络配置
+ */
+public class ConfigureNetworkUtil {
+
+    private static final String TAG = "ConfigureNetworkUtil";
+    private static SocketManager socketManager;
+
+
+    /**
+     * WIFI网络开关
+     */
+    public static void toggleWiFi(Context context) {
+        WifiManager wm = (WifiManager) context.getSystemService(Context.WIFI_SERVICE);
+        if( !wm.isWifiEnabled() ){
+            Logger.d(TAG,"打开wifi开关");
+            wm.setWifiEnabled(true);
+        }
+    }
+
+    /*
+    检查网络提示语
+     */
+    public static void playConnNetPromote(final Context context) {
+
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                if (!MyNetUtil.isNetWork) {
+                    if(socketManager == null ){  //配网中 不进行提示
+                        MediaMusicUtil.getInstance().startPlayMediaRes(R.raw.checking_net);
+                    }
+                }
+            }
+        }, 10000);
+
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                if (!MyNetUtil.isNetWork) {
+                    if(socketManager == null ){  //配网中 不进行提示
+                        MediaMusicUtil.getInstance().startPlayMediaRes(R.raw.touch_setup_net);
+                    }
+                }
+                Logger.i(TAG, "longpress_setup_net");
+            }
+        }, 42000);
+
+    }
+
+    /*
+    配网提示音
+    延迟是为了不让网络监听里面的声音覆盖了这个提示语
+     */
+    private static void connNetApPromote(final Context context){
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                MediaMusicUtil.getInstance().startPlayMediaRes(R.raw.ap_network_prompt);
+            }
+        }, 1000);
+
+    }
+
+    /**
+     * 演示框架部分特性的使用，包含：
+     * 1.ResourceManager的使用
+     * 2.在本地处理命令
+     * 3.删除本地命令
+     * 4.通知的订阅
+     * 5.开启AP联网
+     * 6.开启wifi-direct联网0
+     */
+   public static void connNetAP(final Context context) {
+
+       connNetApPromote(context);
+        /**
+         * Features 示例： 开启AP方式联网
+         */
+        //1. 配置WifiConfiguration对象。
+        WifiConfiguration wc = new WifiConfiguration();
+        wc.SSID = "CSZJ_AP_666";
+        wc.preSharedKey = "666";
+        wc.hiddenSSID = false;
+        wc.allowedAuthAlgorithms.set(WifiConfiguration.AuthAlgorithm.OPEN);
+        wc.allowedProtocols.set(WifiConfiguration.Protocol.RSN);
+        wc.allowedProtocols.set(WifiConfiguration.Protocol.WPA);
+        wc.allowedKeyManagement.set(WifiConfiguration.KeyMgmt.NONE);
+        //2. 配置ApConfiguration, 端口号为22334
+        ApConfiguration apc = new ApConfiguration(22334, wc);
+        //3. 启动AP和接收客户端信息的服务，选择联网方式为TYPE_WIFI_AP.
+        //3. 启动AP和接收客户端信息的服务，选择联网方式为TYPE_WIFI_AP.
+        ConnectionManager.stopConnection(context, ConnectionManager.TYPE_WIFI_AP);
+        ConnectionManager.startReceiveAndConnect(context, ConnectionManager.TYPE_WIFI_AP, apc,
+                new ConnectionStatusCallback() {
+                    @Override
+                    public void onConnectionCompleted(int status) {
+                        //4. 接收数据完成，返回参数代表是否成功接收了数据。连接成功关闭ap.
+                        Logger.d(TAG, "onConnectionCompleted status: " + status);
+                        if (status == ConnectionStatus.WIFI_CONNECTED_READY) {
+                            MediaMusicUtil.getInstance().startPlayMediaRes(R.raw.net_pre_connect);
+                        }else if (status == ConnectionStatus.WIFI_CONNECTED_SUCCESS) {
+                            ConnectionManager.stopConnection(context, ConnectionManager.TYPE_WIFI_AP);
+                        }else if (status == ConnectionStatus.WIFI_CONNECTED_FAIL){
+                            new Handler().postDelayed(new Runnable() {
+                                @Override
+                                public void run() {
+                                    if (!MyNetUtil.isNetworkAvailable(context)) {
+                                        MediaMusicUtil.getInstance().startPlayMediaRes(R.raw.net_disconnect);
+                                    }
+                                }
+                            }, 15000);
+                        }
+                    }
+                },
+                new DataReceiveCallback() {
+                    @Override
+                    public void onReceiveData(String s) {
+                        Logger.d(TAG, "onReceiveData() called with: " + "s = [" + s + "]");
+
+                        String str1 = s.replace("\"", "\\\"").replaceAll("\\\"\\{", "{").replaceAll("\\\\", "");
+                        Logger.i(TAG,"str1:"+str1);
+                        String str2 = str1.replace("\"", "\\\"").replaceAll("\\}\\\\\"", "}").replaceAll("\\\\", "");
+                        Logger.i(TAG,"str2:"+str2);
+
+                        com.alibaba.fastjson.JSONObject resultJson = JSON.parseObject(str2);
+                        com.alibaba.fastjson.JSONObject customJson= resultJson.getJSONObject("customData");
+                        String name = customJson.getString("name");
+                        String imageUrl = customJson.getString("imageUrl");
+                        String uid = customJson.getString("uid");
+                        String deviceId = getAIDeviceId(context);
+                        String params = "apiKey="+ ConstantsUtil.MQTT_APP_KEY + "&uid="+uid + "&deviceId=" + deviceId + "&name=" + name + "&imageUrl=" + imageUrl;
+                        Logger.i(TAG,"params:"+params);
+                        SharedPreferencesUtil.saveBindDeviceParams(params,context);
+                        if(socketManager != null){
+                            socketManager.close();
+                        }
+                        ipFlag = false ;
+                    }
+                },
+                null);
+
+        if(socketManager != null){
+            socketManager.close();
+            socketManager = null ;
+        }
+       socketManager = new SocketManager(context);
+
+        if(ipFlag){
+            return ;
+        }
+       ThreadPoolManager.getInstance().execute(new Runnable() {
+           @Override
+           public void run() {
+               getConnectedIP();
+           }
+       });
+    }
+
+    private static boolean ipFlag = false;
+    private static void getConnectedIP() {
+        ipFlag = true ;
+        while (ipFlag){
+            try {
+                Logger.e(TAG,"getConnectedIP====");
+                Thread.sleep(1000);
+                BufferedReader br = new BufferedReader(new FileReader("/proc/net/arp"));
+                String line;
+                int count =0 ;
+                while ((line = br.readLine()) != null) {
+                    Logger.e(TAG,"line===="+line);
+                    count ++ ;
+                   if(count >= 2){
+                       ipFlag = false ;
+                       MediaMusicUtil.getInstance().startPlayMediaRes(R.raw.ap_detected_network);
+                       return ;
+                   }
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+                Logger.e(TAG,"line===="+e.getMessage());
+            }
+        }
+
+    }
+
+    //获取设备id
+    public static String getAIDeviceId(Context context){
+        TelephonyManager TelephonyMgr = (TelephonyManager)context.getSystemService(context.TELEPHONY_SERVICE);
+        String szImei = null;
+        if(TelephonyMgr != null ){
+            szImei = TelephonyMgr.getDeviceId();
+        }
+
+        Logger.i(TAG,"szImei:"+szImei);
+        if(szImei != null && szImei.length()>=14){
+            szImei =szImei.substring(szImei.length()-14,szImei.length()-1);
+            szImei="ai"+szImei;
+        }
+        Logger.i(TAG,"szImei--:"+szImei);
+        return szImei;
+    }
+}

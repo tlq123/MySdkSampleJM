@@ -19,6 +19,7 @@ import com.turing.turingsdksample.util.Logger;
 import java.io.IOException;
 
 import okhttp3.MediaType;
+import okhttp3.MultipartBody;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.RequestBody;
@@ -55,6 +56,7 @@ public class MQTTBindManager {
         } catch (Exception e) {
             e.printStackTrace();
         }
+
     }
 
     public static void init(final Context mContext){

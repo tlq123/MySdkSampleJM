@@ -9,9 +9,13 @@ import com.turing.semantic.entity.Behavior;
 import com.turing.semantic.listener.OnHttpRequestListener;
 import com.turing.tts.TTSListener;
 import com.turing.tts.TTSManager;
+import com.turing.turingsdksample.alarm.Alarm;
+import com.turing.turingsdksample.alarm.AlarmManagerUtil;
+import com.turing.turingsdksample.alarm.Database;
 import com.turing.turingsdksample.constants.ConstantsUtil;
 import com.turing.turingsdksample.constants.FunctionConstants;
 import com.turing.turingsdksample.demo_common.MediaMusicUtil;
+import com.turing.turingsdksample.demo_common.SharedPreferencesUtil;
 import com.turing.turingsdksample.util.Logger;
 import com.turing.turingsdksample.util.OSDataTransformUtil;
 
@@ -130,6 +134,36 @@ public class JM2Base {
                     JsonObject object = OSDataTransformUtil.getIntent(str).getParameters();
                     tts = object.getAsJsonArray("tasklist").get(0).getAsJsonObject().get("text").getAsString();
                 }
+            }else if(code == 200710){  //闹钟
+                JsonObject object = OSDataTransformUtil.getIntent(str).getParameters();
+                String time = object.get("time").getAsString();
+                String times [] = time.split(":");
+
+                String action = object.get("action").getAsString();
+                Logger.e(TAG,"time:"+time +" action:"+action);
+                if("add".equals(action)){
+                    if(times.length == 3){
+                        int cycleType = object.get("cycleType").getAsInt() ;
+                        int id = SharedPreferencesUtil.getBroadcastReceiverIndex(mContext);
+                        id ++ ;
+                        SharedPreferencesUtil.saveBroadcastReceiverIndex( id ,mContext );
+                        if ( cycleType == 1) {//是每天的闹钟
+                            Logger.e(TAG,"每天闹钟id:"+id );
+                            Alarm alarm = new Alarm();
+                            alarm.setId(id);
+                            alarm.setAlarmTime(times[0]+":"+times[1]);
+                            AlarmManagerUtil.setAlarm(mContext, 1, Integer.parseInt(times[0]), Integer.parseInt
+                                    (times[1]), id, 0, "闹钟响了", 1);
+                            Database.create(alarm);
+                        } else {//是只响一次的闹钟
+                            Logger.e(TAG,"单次闹钟id:"+id );
+                            AlarmManagerUtil.setAlarm(mContext, 0, Integer.parseInt(times[0]), Integer.parseInt
+                                    (times[1]), id, 0, "闹钟响了", 1);
+                        }
+                    }else {
+                        tts = "闹钟添加失败，请从新设置闹钟";
+                    }
+                }
             }
 
             TTSManager.getInstance().startTTS(tts, ttsCallBack);
@@ -215,15 +249,15 @@ public class JM2Base {
         this.isTTs = isTt;
     }
 
+    private Context mContext ;
     /**
      * asr+语义+tts
      **/
     public void getAll(OnHttpRequestListener semanticClientListener, TTSListener ttsClientListener,Context context) {
+        mContext = context ;
         setSemanticListener(semanticClientListener);
         setTTSListener(ttsClientListener);
         setActionBo(true, true);
-//        TTSManager.getInstance().stopTTS();
-
         doPostFirstConversion(); //开机提示语
     }
 

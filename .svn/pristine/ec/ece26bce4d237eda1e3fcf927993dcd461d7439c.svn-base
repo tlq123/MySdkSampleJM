@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.turing.turingsdksample">
+
+    <application
+        android:name=".MyAplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+       <!-- <activity
+            android:name=".activity.StartActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>-->
+        //京密双核项目
+        <!--   android:name=".activity_jm2.JM2Activity"  -->
+        //4G专项
+        <!--   android:name=".activity_my4g.My4GActivity"  -->
+        //中科智联
+        <!--  android:name=".activity_zhongke.ZhongKeActivity"  -->
+        <activity
+            android:name=".activity_jm2.JM2Activity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.HOME" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="com.turing.turingsdksample.activity.MainFragmentActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan">
+
+        </activity>
+        <activity
+            android:name="com.turing.turingsdksample.activity.LoginActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan">
+
+        </activity>
+
+        <meta-data
+            android:name="TURING_APPKEY"
+            android:value="@string/turing_appkey" />
+        <meta-data
+            android:name="TURING_SECRET"
+            android:value="@string/turing_secret" />
+
+    </application>
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.MODIFY_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+
+</manifest>

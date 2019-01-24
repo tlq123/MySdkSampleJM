@@ -7,6 +7,8 @@ import android.media.MediaPlayer;
 import android.media.MediaPlayer.OnPreparedListener;
 import android.media.MediaPlayer.OnCompletionListener;
 import android.media.MediaPlayer.OnErrorListener;
+
+import com.turing.turingsdksample.R;
 import com.turing.turingsdksample.util.Logger;
 
 import java.io.IOException;
@@ -95,8 +97,9 @@ public class MediaMusicUtil {
 
     /**
      * 播放音频  本地资源音频
+     * 首次唤醒设备用的 不能被打断
      */
-    public  void startPlayMediaRes(int res){
+    public  synchronized void startPlayMediaRes(int res){
 
         Logger.i(TAG, "播放本地音频资源");
         if( mpRes != null ){
@@ -113,7 +116,7 @@ public class MediaMusicUtil {
     /**
      * 停止音频  本地资源音频
      */
-    public  void stopPlayMediaRes(){
+    public  synchronized void stopPlayMediaRes(){
         Logger.i(TAG, "停止本地音频");
         if( mpRes != null ){
             if( mpRes.isPlaying() ){
@@ -127,7 +130,7 @@ public class MediaMusicUtil {
     /**
      * 播放音频  网络音频
      */
-    public  void startPlayMediaUrl(String url){
+    public  synchronized void startPlayMediaUrl(String url){
 
         Logger.i(TAG, "播放网络音频资源----url:"+url);
         if( mp == null ){
@@ -164,6 +167,7 @@ public class MediaMusicUtil {
                 mp.stop();
             }
             mp.reset();
+
         }
         try {
             mp.setDataSource(url);
@@ -180,7 +184,7 @@ public class MediaMusicUtil {
     /**
      * 停止播放音乐
      */
-    public  void stopPlayMediaUrl(){
+    public synchronized void stopPlayMediaUrl(){
         Logger.i(TAG, "停止网络音频----:");
         if( mp != null ){
             if( mp.isPlaying() ){

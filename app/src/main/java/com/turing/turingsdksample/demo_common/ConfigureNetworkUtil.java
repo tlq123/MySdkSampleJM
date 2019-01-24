@@ -8,14 +8,20 @@ import android.telephony.TelephonyManager;
 
 import com.alibaba.fastjson.JSON;
 import com.turing.turingsdksample.R;
+import com.turing.turingsdksample.activity_jm2.JM2Activity;
 import com.turing.turingsdksample.constants.ConstantsUtil;
 import com.turing.turingsdksample.util.Logger;
 import com.turing.turingsdksample.util.MyNetUtil;
+import com.turing.turingsdksample.util.ThreadPoolManager;
 import com.turing123.libs.android.connectivity.ConnectionManager;
 import com.turing123.libs.android.connectivity.ConnectionStatus;
 import com.turing123.libs.android.connectivity.ConnectionStatusCallback;
 import com.turing123.libs.android.connectivity.DataReceiveCallback;
 import com.turing123.libs.android.connectivity.wifi.ap.ApConfiguration;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.util.ArrayList;
 
 /*
 网络配置
@@ -24,6 +30,8 @@ public class ConfigureNetworkUtil {
 
     private static final String TAG = "ConfigureNetworkUtil";
     private static SocketManager socketManager;
+    private static boolean isFlag  ; //判断是否进入了 配网连接中
+
 
     /**
      * WIFI网络开关
@@ -41,32 +49,30 @@ public class ConfigureNetworkUtil {
      */
     public static void playConnNetPromote(final Context context) {
 
-        if (MyNetUtil.isNetworkAvailable(context)) {
-            return;
-        }
-
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                if (!MyNetUtil.isNetworkAvailable(context)) {
-                    MediaMusicUtil.getInstance().startPlayMediaRes(R.raw.checking_net);
+                if (!MyNetUtil.isNetWork) {
+                    if(socketManager == null ){  //配网中 不进行提示
+                        MediaMusicUtil.getInstance().startPlayMediaRes(R.raw.checking_net);
+                    }
                 }
             }
-        }, 15000);
+        }, 10000);
 
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                if (!MyNetUtil.isNetworkAvailable(context)) {
-                    MediaMusicUtil.getInstance().startPlayMediaRes(R.raw.touch_setup_net);
+                if (!MyNetUtil.isNetWork) {
+                    if(socketManager == null ){  //配网中 不进行提示
+                        MediaMusicUtil.getInstance().startPlayMediaRes(R.raw.touch_setup_net);
+                    }
                 }
                 Logger.i(TAG, "longpress_setup_net");
             }
-        }, 40000);
+        }, 42000);
 
     }
-
-
 
     /*
     配网提示音
@@ -76,7 +82,7 @@ public class ConfigureNetworkUtil {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                MediaMusicUtil.getInstance().startPlayMediaRes(R.raw.has_enter_setup_type);
+                MediaMusicUtil.getInstance().startPlayMediaRes(R.raw.ap_network_prompt);
             }
         }, 1000);
 
@@ -94,6 +100,7 @@ public class ConfigureNetworkUtil {
    public static void connNetAP(final Context context) {
 
        connNetApPromote(context);
+       isFlag = false ;
         /**
          * Features 示例： 开启AP方式联网
          */
@@ -121,15 +128,26 @@ public class ConfigureNetworkUtil {
                             MediaMusicUtil.getInstance().startPlayMediaRes(R.raw.net_pre_connect);
                         }else if (status == ConnectionStatus.WIFI_CONNECTED_SUCCESS) {
                             ConnectionManager.stopConnection(context, ConnectionManager.TYPE_WIFI_AP);
-                        }else if (status == ConnectionStatus.WIFI_CONNECTED_FAIL){
-                            new Handler().postDelayed(new Runnable() {
+                        }else if (status == 108 || status == 112 || status == 105){
+                            Logger.d(TAG, "WiFi连接失败 isFlag："+isFlag);
+                            if(isFlag){
+                                return;
+                            }else {
+                                isFlag = true ;
+                            }
+                            ThreadPoolManager.getInstance().execute(new Runnable() {
                                 @Override
                                 public void run() {
-                                    if (!MyNetUtil.isNetworkAvailable(context)) {
-                                        MediaMusicUtil.getInstance().startPlayMediaRes(R.raw.net_disconnect);
+                                    try {
+                                        Thread.sleep(15000);
+                                        if (!MyNetUtil.isNetWork) {
+                                            MediaMusicUtil.getInstance().startPlayMediaRes(R.raw.net_disconnect);
+                                        }
+                                    } catch (InterruptedException e) {
+                                        e.printStackTrace();
                                     }
                                 }
-                            }, 15000);
+                            });
                         }
                     }
                 },
@@ -155,6 +173,8 @@ public class ConfigureNetworkUtil {
                         if(socketManager != null){
                             socketManager.close();
                         }
+                        ipFlag = false ;
+                        JM2Activity.isAPFlag = false ;
                     }
                 },
                 null);
@@ -165,8 +185,43 @@ public class ConfigureNetworkUtil {
         }
        socketManager = new SocketManager(context);
 
+        if(ipFlag){
+            return ;
+        }
+       ThreadPoolManager.getInstance().execute(new Runnable() {
+           @Override
+           public void run() {
+               getConnectedIP();
+           }
+       });
     }
 
+    private static boolean ipFlag = false;
+    private static void getConnectedIP() {
+        ipFlag = true ;
+        while (ipFlag){
+            try {
+                Logger.e(TAG,"getConnectedIP====");
+                Thread.sleep(1000);
+                BufferedReader br = new BufferedReader(new FileReader("/proc/net/arp"));
+                String line;
+                int count =0 ;
+                while ((line = br.readLine()) != null) {
+                    Logger.e(TAG,"line===="+line);
+                    count ++ ;
+                   if(count >= 2){
+                       ipFlag = false ;
+                       MediaMusicUtil.getInstance().startPlayMediaRes(R.raw.ap_detected_network);
+                       return ;
+                   }
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+                Logger.e(TAG,"line===="+e.getMessage());
+            }
+        }
+
+    }
 
     //获取设备id
     public static String getAIDeviceId(Context context){
