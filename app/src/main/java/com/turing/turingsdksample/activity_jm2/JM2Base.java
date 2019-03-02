@@ -30,6 +30,7 @@ public class JM2Base {
 
     private TTSListener TTSListener;
     private OnHttpRequestListener mSemanticListener;
+    private OnEmotionListener onEmotionListener ;
     private boolean isDopost = false;//是否进行请求
     private boolean isTTs = false;//是否tts
 
@@ -51,6 +52,10 @@ public class JM2Base {
 
     protected void setSemanticListener(OnHttpRequestListener semanticListener) {
         this.mSemanticListener = semanticListener;
+    }
+
+    protected void setEmotionListener(OnEmotionListener emotion) {
+        this.onEmotionListener = emotion;
     }
 
     public void setPowerValue(int pv){
@@ -81,6 +86,15 @@ public class JM2Base {
                     mSemanticListener.onSuccess(s);
                 }
                 return ;
+            }
+
+//            {"behaviors":[{"emotion":{"answerEmotionId":20300},"exception":"哎呀，没听清你在说什么，请再说一遍",
+//                    "globalId":73321217122000001,"intent":{"appKey":"os.sys.chat","code":100000,"parameters":{},"type":"scene"},"results":
+//                [{"resultType":"text","values":{"text":"这样说话是很没有礼貌的。"}}],"sequences":[{"service":"intent"}]}]}
+
+            Behavior.Emotion emotion = behavior.getEmotion() ;
+            if(emotion != null){
+                onEmotionListener.OnEmotion(emotion.getAnswerEmotionId());
             }
 
             //聊天
@@ -253,9 +267,10 @@ public class JM2Base {
     /**
      * asr+语义+tts
      **/
-    public void getAll(OnHttpRequestListener semanticClientListener, TTSListener ttsClientListener,Context context) {
+    public void getAll(OnHttpRequestListener semanticClientListener,OnEmotionListener emotionListener, TTSListener ttsClientListener,Context context) {
         mContext = context ;
         setSemanticListener(semanticClientListener);
+        setEmotionListener(emotionListener);
         setTTSListener(ttsClientListener);
         setActionBo(true, true);
         doPostFirstConversion(); //开机提示语

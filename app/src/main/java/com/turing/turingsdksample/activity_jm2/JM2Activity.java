@@ -13,6 +13,9 @@ import android.support.annotation.Nullable;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.KeyEvent;
+import android.view.Window;
+import android.view.WindowManager;
+import android.widget.TextView;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
@@ -51,6 +54,7 @@ import org.json.JSONObject;
 
 import java.io.File;
 import java.io.FileOutputStream;
+import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.net.NetworkInterface;
 import java.net.URLDecoder;
@@ -61,6 +65,7 @@ import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
 
+import pl.droidsonroids.gif.GifDrawable;
 import pl.droidsonroids.gif.GifImageView;
 
 /*
@@ -80,6 +85,7 @@ public class JM2Activity extends Activity implements MQTTReceiveInterface {
     private boolean isQSessionError = false ;  //奇梦返回的错误标识
     public static   boolean isAPFlag ;  // ap配网，进入后，屏蔽些提示
     public static final String ALARM_SHOW = "com.alarm.clock.show";
+    private boolean isNetFlag ;  //当前是否联网
     /**
      * 当前返回的语义解析结果
      */
@@ -96,11 +102,17 @@ public class JM2Activity extends Activity implements MQTTReceiveInterface {
     private long initSession;
 
     private GifImageView gifImageView ;
+    private TextView tvCount ;
+
 
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //去除title
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        //去掉Activity上面的状态栏
+        getWindow().setFlags(WindowManager.LayoutParams. FLAG_FULLSCREEN , WindowManager.LayoutParams. FLAG_FULLSCREEN);
         setContentView(R.layout.activity_demo);
 
         Logger.d(TAG,"onCreate...........................");
@@ -111,46 +123,56 @@ public class JM2Activity extends Activity implements MQTTReceiveInterface {
 
     private void initView (){
 
-//        gifImageView = (GifImageView) findViewById(R.id.gif_imageview);
-//        try {
-//            GifDrawable gifDrawable = new GifDrawable(getResources(), R.drawable.wake);
-//            gifImageView.setBackgroundDrawable(gifDrawable);
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
+        tvCount = (TextView) findViewById(R.id.tv_count);
+        gifImageView = (GifImageView) findViewById(R.id.gif_imageview);
+        try {
+            GifDrawable gifDrawable = new GifDrawable(getResources(), R.drawable.change_dizzy);
+            gifImageView.setBackgroundDrawable(gifDrawable);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
-    private void setGifImageView(final boolean type){
-//        if(isAsrFlag = type){
-//            return ;
-//        }
-//        runOnUiThread(new Runnable() {
-//            @Override
-//            public void run() {
-//                if(type){
-//                    try {
-//                        GifDrawable gifDrawable = new GifDrawable(getResources(), R.drawable.recording);
-//                        gifImageView.setBackgroundDrawable(gifDrawable);
-//                    } catch (IOException e) {
-//                        e.printStackTrace();
-//                    }
-//                }else {
-//                    try {
-//                        GifDrawable gifDrawable = new GifDrawable(getResources(), R.drawable.wake);
-//                        gifImageView.setBackgroundDrawable(gifDrawable);
-//                    } catch (IOException e) {
-//                        e.printStackTrace();
-//                    }
-//                }
-//
-//            }
-//        });
+    private int gifType = 0 ;
+    private void setGifImageView(final int type){
+        if(gifType == type){
+            return ;
+        }
+        gifType = type ;
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    GifDrawable gifDrawable ;
+                    switch (type){
+                        case 0:  //默认状态
+                            gifDrawable = new GifDrawable(getResources(), R.drawable.change_dizzy);
+                            gifImageView.setBackgroundDrawable(gifDrawable);
+                            break ;
+                        case 1:  //打断说话状态
+                            gifDrawable = new GifDrawable(getResources(), R.drawable.recording);
+                            gifImageView.setBackgroundDrawable(gifDrawable);
+                            break;
+                        case  2:  //休眠状态
+                            gifDrawable = new GifDrawable(getResources(), R.drawable.wake);
+                            gifImageView.setBackgroundDrawable(gifDrawable);
+                        break;
+                        default:
+                            gifDrawable = new GifDrawable(getResources(), R.drawable.change_dizzy);
+                            gifImageView.setBackgroundDrawable(gifDrawable);
+                            break;
+                    }
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
 
     }
 
     private void init(){
 
-
+        isNetFlag = false ;
         isAPFlag = false ;
         isQSessionError = false ;
         mContext = this ;
@@ -346,7 +368,7 @@ public class JM2Activity extends Activity implements MQTTReceiveInterface {
                             @Override
                             public void onSuccess() {
                                 Logger.e(TAG, "TTS init success");
-                                JM2Base.getInstance().getAll(httpClientListener,itsCallback,mContext);
+                                JM2Base.getInstance().getAll(httpClientListener,mEmotionListener,itsCallback,mContext);
                                 initQM();
 //                                点播
                                 MQTTBindManager.setOnMQTTReceiveListener(JM2Activity.this);
@@ -384,6 +406,7 @@ public class JM2Activity extends Activity implements MQTTReceiveInterface {
             Log.d(TAG, "识别结果 discernASR=======>: " + discernASR);
             if(!TextUtils.isEmpty(discernASR)){
                 JM2Base.getInstance().doPost(discernASR);
+                setGifImageView(0);
             }
 
         }catch (Exception e){
@@ -480,6 +503,16 @@ public class JM2Activity extends Activity implements MQTTReceiveInterface {
     };
 
     /*
+    表情回调
+     */
+    private OnEmotionListener mEmotionListener = new OnEmotionListener() {
+        @Override
+        public void OnEmotion(int emotion) {
+            setGifImageView(emotion);
+        }
+    };
+
+    /*
     tts监听 除了唱歌和讲故事
      */
     private TTSListener itsCallback = new TTSListener() {
@@ -519,6 +552,7 @@ public class JM2Activity extends Activity implements MQTTReceiveInterface {
             if ("speakBegin".equals(ttsCallbackState)) {
                 MediaMusicUtil.getInstance().startPlayMediaRes(R.raw.speech_end_xiu);
                 setAsrFlag(true);
+                setGifImageView(1);
 //                AsrManager.getInstance().startAsr(asrListener);
              //休眠
             }else if("dormancy".equals(ttsCallbackState)){
@@ -576,6 +610,8 @@ public class JM2Activity extends Activity implements MQTTReceiveInterface {
 
             exitLogic() ;
             checkRecordTimeout ();
+
+
 
         }
 
@@ -646,6 +682,7 @@ public class JM2Activity extends Activity implements MQTTReceiveInterface {
         setAsrFlag(true);
         isQSessionError = false ;  //奇梦错误标识
         Logger.d(TAG, "exitLogic isAsrFlag："+isAsrFlag);
+        setGifImageView(1);
     }
 
     //打断退出 点播
@@ -658,6 +695,7 @@ public class JM2Activity extends Activity implements MQTTReceiveInterface {
         }
         MediaMusicUtil.getInstance().stopPlayMediaUrl();
         Logger.d(TAG, "exitLogic 2：");
+        setGifImageView(1);
     }
 
     //闹钟提示
@@ -688,6 +726,7 @@ public class JM2Activity extends Activity implements MQTTReceiveInterface {
             timer.cancel();
             timer = null ;
         }
+        setGifImageView(2);
     }
 
     /*
@@ -697,7 +736,6 @@ public class JM2Activity extends Activity implements MQTTReceiveInterface {
         if(flag){
             recordTime = System.currentTimeMillis() ;
         }
-        setGifImageView(flag);
         isAsrFlag = flag ;
     }
 
@@ -783,11 +821,11 @@ public class JM2Activity extends Activity implements MQTTReceiveInterface {
     }
 
 
-    private  int curPosition;
+    private  int curPosition;  //点播歌曲的播放进度位置
     private  boolean isLastSong = false;//是否是之前同一首歌曲
     private  String lastUrl = "";
     private int mediaType = 0 ;  //0表示无类型  1表示点播新歌曲 2表示点播暂停播放  3表示奇梦搜索的歌曲
-    private MqttInfo mMqttInfo ;
+    private MqttInfo mMqttInfo ; //点播歌曲的信息
 
     /*
     处理点播音频
@@ -836,7 +874,7 @@ public class JM2Activity extends Activity implements MQTTReceiveInterface {
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
         }
-
+        setGifImageView(0);
     }
 
 
@@ -854,6 +892,7 @@ public class JM2Activity extends Activity implements MQTTReceiveInterface {
             return ;
         }
         dealMusic(mqttInfo);
+        setGifImageView(0);
     }
 
 
@@ -886,14 +925,16 @@ public class JM2Activity extends Activity implements MQTTReceiveInterface {
                         Logger.i(TAG, "CONNECTIVITY_ACTION  NetUtil.isNetworkAvailable(mcontext):" +netFlag );
                         if (netFlag) {//有网络
                             isAPFlag = false ;
-                            if(!isMusic){  //当播放歌曲时，不进行提示，播完后进行提示
+                            if(!isMusic && !isNetFlag){  //当播放歌曲时，不进行提示，播完后进行提示
                                 MediaMusicUtil.getInstance().startPlayMediaRes(R.raw.net_connected);
                             }
+                            isNetFlag = true  ;
                             initTuing();
                         } else {//无网络
-                            if(!isMusic && !isAPFlag) {
+                            if(!isMusic && !isAPFlag && isNetFlag) {
                                 MediaMusicUtil.getInstance().startPlayMediaRes(R.raw.net_off_hint);
                             }
+                            isNetFlag = false  ;
                         }
                     }
                 });
@@ -920,6 +961,14 @@ public class JM2Activity extends Activity implements MQTTReceiveInterface {
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         Logger.i(TAG, "keyCode:" + keyCode);
+
+
+/*        单独测试触摸键 出现一直按下的情况 调试使用
+        if ( keyCode == 10 || keyCode == 4) {
+            MediaMusicUtil.getInstance().startPlayMediaRes2(R.raw.speech_end_xiu);
+            return true ;
+        }*/
+
         if ( keyCode == 10 || keyCode == 4) {
 
             if(isRecorder){
@@ -934,6 +983,7 @@ public class JM2Activity extends Activity implements MQTTReceiveInterface {
                 exitLogic2();
                 isAPFlag = true ;
                 ConfigureNetworkUtil.connNetAP(mContext);
+                setGifImageView(0);
             }
             return true;
         }else if(keyCode == KeyEvent.KEYCODE_0){  // 7表示开始录音

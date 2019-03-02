@@ -114,6 +114,24 @@ public class MediaMusicUtil {
     }
 
     /**
+     * 播放音频  本地资源音频
+     * 首次唤醒设备用的 不能被打断
+     */
+    public  synchronized void startPlayMediaRes2(int res){
+
+        Logger.i(TAG, "播放本地音频资源");
+        if( mpRes != null ){
+            if( mpRes.isPlaying() ){
+                return ;
+            }
+            mpRes.reset();
+            mpRes = null ;
+        }
+        mpRes = MediaPlayer.create(mContext, res);
+        mpRes.start();
+    }
+
+    /**
      * 停止音频  本地资源音频
      */
     public  synchronized void stopPlayMediaRes(){
